@@ -56,7 +56,7 @@ export default function AboutPage() {
                 Building Wealth Through Real Estate Ownership
               </h1>
               <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                Secure your future with premium land investments from Nigeria's trusted real estate network.
+                Secure your future with premium land investments from Nigeria&apos;s trusted real estate network.
               </p>
                 <Link href="/properties" className="btn-primary px-8 py-4 text-lg font-semibold">
                   Discover Available Estates
@@ -81,7 +81,7 @@ export default function AboutPage() {
           <AnimateOnScroll direction="fade">
             <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <img src="/About Us heading Svg.svg" alt="About heading mark" width={40} height={20} />
+              <Image src="/About Us heading Svg.svg" alt="About heading mark" width={40} height={20} />
               <h2 className="text-3xl font-bold text-secondary font-heading">Who We Are</h2>
             </div>
               <h3 className="text-4xl font-bold text-secondary font-heading">Empowering You Through Real Estate</h3>
@@ -133,7 +133,7 @@ export default function AboutPage() {
             </p>
             
             <p className="text-gray-700 leading-relaxed font-semibold">
-              At PWAN Elite, we don't just sell land — we build futures, create wealth, and open doors to generational prosperity.
+              At PWAN Elite, we don&apos;t just sell land — we build futures, create wealth, and open doors to generational prosperity.
             </p>
             </div>
           </AnimateOnScroll>
@@ -185,7 +185,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-secondary mb-4 font-heading">Our Vision</h3>
               <p className="text-secondary leading-relaxed">
-                To make home ownership a reality and become Africa's most reliable real estate company by making property ownership easy, affordable, and rewarding for everyone.
+                To make home ownership a reality and become Africa&apos;s most reliable real estate company by making property ownership easy, affordable, and rewarding for everyone.
               </p>
             </div>
 

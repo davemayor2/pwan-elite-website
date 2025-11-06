@@ -96,7 +96,7 @@ export default function Hero() {
 
         {/* Subheading */}
         <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90 font-body">
-          Secure your future with premium land investments from Nigeria's trusted real estate network.
+          Secure your future with premium land investments from Nigeria&apos;s trusted real estate network.
         </p>
 
         {/* CTA Buttons */}

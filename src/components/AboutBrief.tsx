@@ -69,7 +69,7 @@ export default function AboutBrief() {
                 <h3 className="text-secondary font-heading font-semibold text-lg">Our Vision</h3>
               </div>
               <p className="text-gray-800 font-body">
-                To make home ownership a reality and become Africa's most reliable real estate company by making property ownership easy, affordable, and rewarding for everyone.
+                To make home ownership a reality and become Africa&apos;s most reliable real estate company by making property ownership easy, affordable, and rewarding for everyone.
               </p>
               </div>
             </AnimateOnScroll>

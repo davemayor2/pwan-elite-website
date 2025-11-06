@@ -15,11 +15,11 @@ interface PageProps {
 
 export default function PropertyDetailsPage({ params }: PageProps) {
   const { slug } = use(params);
-  const data = getPropertyBySlug(slug);
-  if (!data) return notFound();
-
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const data = getPropertyBySlug(slug);
+  if (!data) return notFound();
 
   // Prevent body scroll when lightbox is open
   useEffect(() => {

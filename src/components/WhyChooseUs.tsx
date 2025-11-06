@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
               Why Choose <span className="text-primary">PWAN Elite</span>
             </h2>
             <p className="mt-3 mx-auto max-w-[700px] text-[#555]">
-              We don't just sell land — we help people build futures. PWAN ELITE stands for trust, quality,
+              We don&apos;t just sell land — we help people build futures. PWAN ELITE stands for trust, quality,
               and empowerment, creating lasting value through properties that appreciate and transform lives.
             </p>
           </div>
@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
             </div>
             <p className="mt-3 text-gray-600">
               Every property we offer is thoroughly verified with proper documentation and clear title. You can invest
-              confidently, knowing you're getting genuine land — free from encumbrances or hidden issues.
+              confidently, knowing you&apos;re getting genuine land — free from encumbrances or hidden issues.
             </p>
             </div>
           </AnimateOnScroll>

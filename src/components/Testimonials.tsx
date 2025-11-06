@@ -56,7 +56,7 @@ export default function Testimonials() {
               </h2>
             </div>
             <p className="max-w-2xl text-[#555]">
-              At PWAN ELITE, our greatest achievement is seeing our clients' dreams come true. Every story reminds us why
+              At PWAN ELITE, our greatest achievement is seeing our clients&apos; dreams come true. Every story reminds us why
               we do what we do — making land ownership simple, transparent, and rewarding.
             </p>
           </div>

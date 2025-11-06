@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 
@@ -95,7 +96,7 @@ export default function FeaturedListings() {
                 direction={idx % 2 === 0 ? 'left' : 'right'} 
                 delay={idx * 0.1}
                 className="min-w-0 lg:min-w-[200px]"
-                style={{ flex: activeIdx === idx ? ('6 1 0%' as any) : ('1 1 0%' as any), transition: 'flex 0.3s ease-in-out' }}
+                style={{ flex: activeIdx === idx ? ('6 1 0%' as string) : ('1 1 0%' as string), transition: 'flex 0.3s ease-in-out' }}
               >
                 <div
                  className={`group relative h-[580px] overflow-hidden bg-black cursor-pointer transition-all duration-300 ease-in-out ${
@@ -142,9 +143,9 @@ export default function FeaturedListings() {
 
         <AnimateOnScroll direction="fade" delay={0.4}>
           <div className="text-center mt-8">
-            <a href="/properties" className="btn-dark-wipe inline-block px-6 py-3 font-semibold">
+            <Link href="/properties" className="btn-dark-wipe inline-block px-6 py-3 font-semibold">
             View All Land Listings
-          </a>
+          </Link>
           </div>
         </AnimateOnScroll>
       </div>
