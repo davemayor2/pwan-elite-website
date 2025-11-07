@@ -70,14 +70,28 @@ export default function WhyChooseUs() {
           {/* Image 1 */}
           <AnimateOnScroll direction="right" delay={0.2} className="lg:row-start-1 lg:col-start-2 h-full">
             <div className="relative bg-gray-200 h-[180px] md:h-[200px] lg:h-full border border-gray-200 shadow-md">
-              <Image src="/pexels-davidmcbee-1546168.jpg" alt="Client 1" fill className="object-cover" />
+              <Image
+                src="/pexels-davidmcbee-1546168.jpg"
+                alt="Client 1"
+                fill
+                loading="lazy"
+                sizes="(max-width: 1024px) 100vw, 25vw"
+                className="object-cover"
+              />
             </div>
           </AnimateOnScroll>
 
           {/* Image 2 - tall, spans two rows */}
           <AnimateOnScroll direction="up" delay={0.3} className="lg:row-start-1 lg:row-span-2 lg:col-start-3 h-full">
             <div className="relative bg-gray-200 h-[180px] md:h-[220px] lg:h-full w-full border border-gray-200 shadow-md">
-              <Image src="/david-vives-TZdh8NdfIfs-unsplash.jpg" alt="Client 2" fill className="object-cover" />
+              <Image
+                src="/david-vives-TZdh8NdfIfs-unsplash.jpg"
+                alt="Client 2"
+                fill
+                loading="lazy"
+                sizes="(max-width: 1024px) 100vw, 25vw"
+                className="object-cover"
+              />
             </div>
           </AnimateOnScroll>
 

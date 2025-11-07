@@ -114,7 +114,14 @@ export default function PropertyDetailsPage({ params }: PageProps) {
               className="relative lg:col-span-8 w-full aspect-[16/10] bg-gray-100 flex items-center justify-center cursor-pointer group hover:opacity-90 transition-opacity"
               onClick={() => setIsLightboxOpen(true)}
             >
-              <Image src={property.images[0]} alt="Estate Flyer" fill className="object-contain" priority />
+            <Image
+              src={property.images[0]}
+              alt="Estate Flyer"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 66vw"
+              className="object-contain"
+            />
               <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/10 transition-colors">
                 <span className="opacity-0 group-hover:opacity-100 text-white text-sm font-semibold bg-black/50 px-4 py-2 rounded">
                   Click to expand
@@ -318,8 +325,9 @@ export default function PropertyDetailsPage({ params }: PageProps) {
               src={property.images[0]}
               alt="Estate Flyer - Expanded View"
               fill
-              className="object-contain"
               priority
+              sizes="100vw"
+              className="object-contain"
             />
           </div>
         </div>

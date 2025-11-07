@@ -105,7 +105,14 @@ export default function FeaturedListings() {
                 onClick={() => handleCardClick(idx)}
                 onMouseEnter={() => setActiveIdx(idx)}
               >
-                <Image src={p.image} alt={p.title} fill className="object-cover opacity-90" />
+                <Image
+                  src={p.image}
+                  alt={p.title}
+                  fill
+                  loading={idx === 0 ? 'eager' : 'lazy'}
+                  sizes="(max-width: 1024px) 100vw, 25vw"
+                  className="object-cover opacity-90"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
                 <div className="absolute top-3 left-3 bg-primary text-white text-xs font-medium px-2 py-1 tracking-wide">
                   {p.tag}
@@ -124,7 +131,7 @@ export default function FeaturedListings() {
                     <div className="text-sm text-gray-200 mb-2">{p.description}</div>
                     <div className="text-sm text-gray-100 mb-3">{p.priceLabel}</div>
                   </div>
-                  <a
+                  <Link
                     href={`/properties/${p.slug}`}
                     className={`inline-block px-4 py-2 text-sm tracking-wide transition-all duration-300 ease-in-out md:group-hover:-translate-y-0.5 ${
                       (!isMobile && activeIdx === idx) || (isMobile && isExpanded)
@@ -133,7 +140,7 @@ export default function FeaturedListings() {
                     }`}
                   >
                     View Estate Details
-                  </a>
+                  </Link>
                 </div>
               </div>
               </AnimateOnScroll>

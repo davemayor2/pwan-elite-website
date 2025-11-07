@@ -34,6 +34,7 @@ export default function PropertyGallery({ images }: PropertyGalleryProps) {
                 className="object-cover"
                 onClick={() => setIsLightboxOpen(true)}
                 priority
+                sizes="(max-width: 1024px) 100vw, 66vw"
               />
             )}
           </div>
@@ -47,7 +48,14 @@ export default function PropertyGallery({ images }: PropertyGalleryProps) {
                 className="relative w-full aspect-square bg-gray-100 focus:outline-none"
                 aria-label={`Show image ${idx + 1}`}
               >
-                <Image src={img} alt={`Thumbnail ${idx + 1}`} fill className="object-cover" />
+                <Image
+                  src={img}
+                  alt={`Thumbnail ${idx + 1}`}
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 1024px) 33vw, 160px"
+                  className="object-cover"
+                />
               </button>
             ))}
           </div>
@@ -61,7 +69,7 @@ export default function PropertyGallery({ images }: PropertyGalleryProps) {
           onClick={() => setIsLightboxOpen(false)}
         >
           <div className="relative w-[90vw] max-w-5xl aspect-[16/10]">
-            <Image src={active} alt="Preview" fill className="object-contain" />
+            <Image src={active} alt="Preview" fill sizes="100vw" className="object-contain" />
           </div>
         </div>
       )}
