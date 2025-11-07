@@ -18,13 +18,11 @@ export default function PropertyDetailsPage({ params }: PageProps) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const property = getPropertyBySlug(slug);
-  if (!property) {
+  const data = getPropertyBySlug(slug);
+  if (!data) {
     notFound();
-    return null;
   }
-
-  const data = property;
+  const property = data as NonNullable<typeof data>;
 
   // Prevent body scroll when lightbox is open
   useEffect(() => {
@@ -85,15 +83,15 @@ export default function PropertyDetailsPage({ params }: PageProps) {
       <header className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${data.heroImage})` }}
+          style={{ backgroundImage: `url(${property.heroImage})` }}
         ></div>
         <div className="absolute inset-0" style={{ background: 'linear-gradient(0deg, rgba(14,13,83,0.85), rgba(14,13,83,0.6))' }}></div>
 
         <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 relative z-10 py-24">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 font-heading">{data.title}</h1>
-            <p className="text-lg md:text-xl text-gray-200 mb-2">{data.location}</p>
-            {data.tagline && <p className="text-gray-200 max-w-2xl mb-6">{data.tagline}</p>}
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 font-heading">{property.title}</h1>
+            <p className="text-lg md:text-xl text-gray-200 mb-2">{property.location}</p>
+            {property.tagline && <p className="text-gray-200 max-w-2xl mb-6">{property.tagline}</p>}
             <button onClick={handleScrollToInquiry} className="px-8 py-4 bg-primary text-white font-semibold">
               Book an Inspection
             </button>
@@ -116,7 +114,7 @@ export default function PropertyDetailsPage({ params }: PageProps) {
               className="relative lg:col-span-8 w-full aspect-[16/10] bg-gray-100 flex items-center justify-center cursor-pointer group hover:opacity-90 transition-opacity"
               onClick={() => setIsLightboxOpen(true)}
             >
-              <Image src={data.images[0]} alt="Estate Flyer" fill className="object-contain" priority />
+              <Image src={property.images[0]} alt="Estate Flyer" fill className="object-contain" priority />
               <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/10 transition-colors">
                 <span className="opacity-0 group-hover:opacity-100 text-white text-sm font-semibold bg-black/50 px-4 py-2 rounded">
                   Click to expand
@@ -129,17 +127,17 @@ export default function PropertyDetailsPage({ params }: PageProps) {
               <div className="bg-gray-50 text-secondary p-6 shadow-sm border border-gray-200">
                 <h3 className="text-xl font-bold mb-4">Quick Facts</h3>
                 <ul className="space-y-3 text-sm">
-                  <li><strong>Price:</strong> {data.price}</li>
-                  <li><strong>Location:</strong> {data.location}</li>
-                  <li><strong>Title:</strong> {data.titleType}</li>
-                  <li><strong>Plot Size:</strong> {data.plotSize}</li>
-                  <li><strong>Type:</strong> {data.propertyType}</li>
-                  <li><strong>Payment Plan:</strong> {data.paymentPlan}</li>
+                  <li><strong>Price:</strong> {property.price}</li>
+                  <li><strong>Location:</strong> {property.location}</li>
+                  <li><strong>Title:</strong> {property.titleType}</li>
+                  <li><strong>Plot Size:</strong> {property.plotSize}</li>
+                  <li><strong>Type:</strong> {property.propertyType}</li>
+                  <li><strong>Payment Plan:</strong> {property.paymentPlan}</li>
                 </ul>
                 <div className="mt-6 space-y-3">
-                  {data.subscriptionFormUrl && (
+                  {property.subscriptionFormUrl && (
                     <a 
-                      href={data.subscriptionFormUrl} 
+                      href={property.subscriptionFormUrl} 
                       download
                       target="_blank"
                       rel="noopener noreferrer"
@@ -148,9 +146,9 @@ export default function PropertyDetailsPage({ params }: PageProps) {
                       📄 Download Subscription Form
                     </a>
                   )}
-                  {data.brochureUrl && (
+                  {property.brochureUrl && (
                     <a 
-                      href={data.brochureUrl} 
+                      href={property.brochureUrl} 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full inline-block px-6 py-3 bg-secondary text-white font-semibold text-center hover:opacity-90 transition rounded"
@@ -167,16 +165,16 @@ export default function PropertyDetailsPage({ params }: PageProps) {
 
       {/* Details - description/video only */}
       <PropertyDetails
-        description={data.description}
-        videoId={data.videoId}
+        description={property.description}
+        videoId={property.videoId}
         facts={{
-          price: data.price,
-          location: data.location,
-          titleType: data.titleType,
-          plotSize: data.plotSize,
-          propertyType: data.propertyType,
-          paymentPlan: data.paymentPlan,
-          brochureUrl: data.brochureUrl,
+          price: property.price,
+          location: property.location,
+          titleType: property.titleType,
+          plotSize: property.plotSize,
+          propertyType: property.propertyType,
+          paymentPlan: property.paymentPlan,
+          brochureUrl: property.brochureUrl,
         }}
         showQuickFacts={false}
       />
@@ -194,7 +192,7 @@ export default function PropertyDetailsPage({ params }: PageProps) {
             Estate Features
           </motion.h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {data.amenities.map((amenity) => (
+            {property.amenities.map((amenity) => (
               <motion.div
                 key={amenity}
                 initial={{ opacity: 0, y: 16 }}
@@ -212,13 +210,13 @@ export default function PropertyDetailsPage({ params }: PageProps) {
       </section>
 
       {/* Map */}
-      {data.mapEmbedUrl && (
+      {property.mapEmbedUrl && (
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6 font-heading">Find Us Here</h2>
             <div className="w-full h-[420px]">
               <iframe
-                src={data.mapEmbedUrl}
+                src={property.mapEmbedUrl}
                 width="100%"
                 height="100%"
                 loading="lazy"
@@ -272,7 +270,7 @@ export default function PropertyDetailsPage({ params }: PageProps) {
                 <label htmlFor="property" className="block text-sm font-medium text-gray-700 mb-1">
                   Property of Interest *
                 </label>
-                <input type="text" id="property" name="property" defaultValue={data.title} required disabled={isSubmitting} className="w-full bg-gray-50 px-4 py-4 text-gray-900 outline-none border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed" />
+                <input type="text" id="property" name="property" defaultValue={property.title} required disabled={isSubmitting} className="w-full bg-gray-50 px-4 py-4 text-gray-900 outline-none border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed" />
               </div>
               <div>
                 <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">
@@ -317,7 +315,7 @@ export default function PropertyDetailsPage({ params }: PageProps) {
           </button>
           <div className="relative w-full h-full max-w-7xl max-h-[90vh] flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
             <Image
-              src={data.images[0]}
+              src={property.images[0]}
               alt="Estate Flyer - Expanded View"
               fill
               className="object-contain"
