@@ -35,7 +35,7 @@ export default function ContactSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[560px]" style={{ gridAutoRows: '1fr' }}>
         {/* Left image area */}
         <AnimateOnScroll direction="left" className="lg:col-span-5 h-full">
-          <div className="relative h-[320px] lg:h-full w-full">
+          <div className="relative h-[220px] sm:h-[260px] md:h-[320px] lg:h-full w-full">
           <Image
             src="/david-vives-TZdh8NdfIfs-unsplash.jpg"
             alt="Clients on site"
@@ -44,14 +44,12 @@ export default function ContactSection() {
             priority
           />
           {/* Red vertical ribbon with rotated text */}
-          <div className="absolute inset-y-0 right-0 w-[240px] bg-primary hidden lg:block">
-            <div className="relative w-full h-full">
-              {/* Eyebrow - left side, vertical */}
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 -rotate-90 text-white/90 text-sm tracking-[0.25em] uppercase whitespace-nowrap">
+          <div className="absolute lg:inset-y-0 lg:right-0 bg-primary flex items-center justify-center lg:w-[240px] px-6 py-3 sm:px-8 sm:py-4 lg:px-0 lg:py-0">
+            <div className="flex lg:flex-col lg:items-center lg:justify-center gap-2 lg:gap-0">
+              <span className="text-white/90 uppercase tracking-[0.25em] text-xs lg:text-sm font-heading">
                 Here to Serve
               </span>
-              {/* Main heading - centered vertically */}
-              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-90 text-white font-heading font-semibold whitespace-nowrap text-4xl leading-none">
+              <span className="text-white font-heading font-semibold text-lg sm:text-xl lg:text-4xl leading-none lg:-rotate-90 lg:mt-6 whitespace-nowrap">
                 Feel Free to Contact Us
               </span>
             </div>
