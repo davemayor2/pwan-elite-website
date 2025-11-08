@@ -55,6 +55,15 @@ export default function ContactSection() {
             </div>
           </div>
           </div>
+          {/* Mobile red banner */}
+          <div className="lg:hidden bg-primary text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mt-4">
+            <span className="uppercase tracking-[0.25em] text-xs font-heading text-white/90">
+              Here to Serve
+            </span>
+            <span className="font-heading font-semibold text-lg leading-tight">
+              Feel Free to Contact Us
+            </span>
+          </div>
         </AnimateOnScroll>
 
         {/* Right form side */}
