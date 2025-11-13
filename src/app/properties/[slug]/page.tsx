@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { useState, useEffect, use } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { getPropertyBySlug } from '@/data/propertyData';
+import { getPropertyBySlug, PROPERTY_DETAILS } from '@/data/propertyData';
 import PropertyDetails from '@/components/PropertyDetails';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -258,48 +258,84 @@ export default function PropertyDetailsPage({ params }: PageProps) {
             Schedule an Inspection
           </motion.h3>
           <div className="bg-white border border-gray-200 shadow-sm p-8">
-            <form onSubmit={handleFormSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <form onSubmit={handleFormSubmit} className="space-y-5">
               <input type="hidden" name="access_key" value="58280fc8-b4a5-4717-88ed-db34dac3833a" />
               <input type="hidden" name="form_type" value="Book Inspection" />
-              <div className="md:col-span-2">
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Full Name *
-                </label>
-                <input type="text" id="name" name="name" placeholder="Full Name" required disabled={isSubmitting} className="w-full bg-gray-50 px-4 py-4 text-gray-900 outline-none border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed" />
-              </div>
+
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                  Phone *
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Full Name
                 </label>
-                <input type="tel" id="phone" name="phone" placeholder="Phone" required disabled={isSubmitting} className="w-full bg-gray-50 px-4 py-4 text-gray-900 outline-none border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed" />
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  disabled={isSubmitting}
+                  className="w-full bg-gray-50 px-4 py-3 text-gray-900 outline-none border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                />
               </div>
+
               <div>
-                <label htmlFor="property" className="block text-sm font-medium text-gray-700 mb-1">
-                  Property of Interest *
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Phone Number
                 </label>
-                <input type="text" id="property" name="property" defaultValue={property.title} required disabled={isSubmitting} className="w-full bg-gray-50 px-4 py-4 text-gray-900 outline-none border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed" />
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  disabled={isSubmitting}
+                  className="w-full bg-gray-50 px-4 py-3 text-gray-900 outline-none border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                />
               </div>
+
               <div>
-                <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">
-                  Preferred Date
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Property of Interest
                 </label>
-                <input type="date" id="date" name="date" disabled={isSubmitting} className="w-full bg-gray-50 px-4 py-4 text-gray-900 outline-none border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed" />
+                <select
+                  name="property"
+                  required
+                  disabled={isSubmitting}
+                  className="w-full bg-gray-50 px-4 py-3 text-gray-900 outline-none border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <option value="" disabled selected>Select property</option>
+                  {Object.values(PROPERTY_DETAILS).map((estate) => (
+                    <option key={estate.slug} value={estate.title}>
+                      {estate.title}
+                    </option>
+                  ))}
+                </select>
               </div>
-              <div className="md:col-span-2">
-                <button type="submit" disabled={isSubmitting} className="w-full bg-primary text-white font-semibold py-4 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
-                  {isSubmitting ? (
-                    <>
-                      <span>Submit</span>
-                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                    </>
-                  ) : (
-                    'Book Inspection'
-                  )}
-                </button>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Preferred Inspection Date
+                </label>
+                <input
+                  type="date"
+                  name="date"
+                  disabled={isSubmitting}
+                  className="w-full bg-gray-50 px-4 py-3 text-gray-900 outline-none border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                />
               </div>
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-primary text-white font-semibold py-4 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              >
+                {isSubmitting ? (
+                  <>
+                    <span>Book Inspection</span>
+                    <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                  </>
+                ) : (
+                  'Book Inspection'
+                )}
+              </button>
             </form>
           </div>
         </div>

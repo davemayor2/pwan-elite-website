@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   description: "Secure your future with premium land investments from Nigeria's trusted real estate network. PWAN Elite offers verified properties, flexible payment plans, and expert advisory services.",
   keywords: "real estate, property investment, land sales, Nigeria real estate, PWAN Elite, property development",
   authors: [{ name: "PWAN Elite" }],
+  icons: {
+    icon: "/PWANlogo.png",
+    shortcut: "/PWANlogo.png",
+    apple: "/PWANlogo.png",
+  },
   openGraph: {
     title: "PWAN Elite - Building Wealth Through Real Estate Ownership",
     description: "Secure your future with premium land investments from Nigeria's trusted real estate network.",

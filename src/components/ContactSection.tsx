@@ -32,7 +32,7 @@ export default function ContactSection() {
 
   return (
     <section className="relative w-full">
-      <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[560px]" style={{ gridAutoRows: '1fr' }}>
+      <div className="grid grid-cols-1 lg:grid-cols-12 lg:min-h-[560px] lg:[grid-auto-rows:1fr]">
         {/* Left image area */}
         <AnimateOnScroll direction="left" className="lg:col-span-5 h-full">
           <div className="relative h-[220px] sm:h-[260px] md:h-[320px] lg:h-full w-full">
@@ -46,17 +46,17 @@ export default function ContactSection() {
           {/* Red vertical ribbon with rotated text */}
           <div className="absolute lg:inset-y-0 lg:right-0 bg-primary flex items-center justify-center lg:w-[240px] px-6 py-3 sm:px-8 sm:py-4 lg:px-0 lg:py-0">
             <div className="flex lg:flex-col lg:items-center lg:justify-center gap-2 lg:gap-0">
-              <span className="text-white/90 uppercase tracking-[0.25em] text-xs lg:text-sm font-heading">
+              <span className="text-white/90 uppercase tracking-[0.25em] text-xs lg:text-sm font-heading lg:-rotate-90 lg:-translate-y-12">
                 Here to Serve
               </span>
-              <span className="text-white font-heading font-semibold text-lg sm:text-xl lg:text-4xl leading-none lg:-rotate-90 lg:mt-6 whitespace-nowrap">
+              <span className="text-white font-heading font-semibold text-lg sm:text-xl lg:text-4xl leading-none lg:-rotate-90 whitespace-nowrap lg:translate-y-12">
                 Feel Free to Contact Us
               </span>
             </div>
           </div>
           </div>
           {/* Mobile red banner */}
-          <div className="lg:hidden bg-primary text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mt-4">
+          <div className="lg:hidden bg-primary text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <span className="uppercase tracking-[0.25em] text-xs font-heading text-white/90">
               Here to Serve
             </span>

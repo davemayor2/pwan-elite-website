@@ -102,10 +102,10 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <nav className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4">
           <div className="flex justify-between items-center h-16 md:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center flex-shrink-0">
               <Image
                 src="/PWANlogo.png"
                 alt="PWAN Elite Logo"
@@ -133,6 +133,7 @@ export default function Navbar() {
                   className={`font-medium text-lg transition-colors flex items-center ${
                     isAboutActive() ? 'text-primary font-bold' : 'text-gray-600 hover:text-primary'
                   }`}
+                  onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
                 >
                   About Us
                   <svg className={`w-4 h-4 ml-1 transition-transform ${isAboutDropdownOpen ? 'rotate-180' : ''}`} fill="currentColor" viewBox="0 0 20 20">
@@ -175,7 +176,7 @@ export default function Navbar() {
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden bg-primary text-white p-2.5"
+              className="md:hidden bg-primary text-white p-2.5 ml-auto"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
