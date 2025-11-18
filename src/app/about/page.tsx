@@ -81,7 +81,7 @@ export default function AboutPage() {
           <AnimateOnScroll direction="fade">
             <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Image src="/ABOUT US HERO SECTION.png" alt="About heading mark" width={40} height={20} />
+              <Image src="/About Us heading Svg.svg" alt="About heading mark" width={40} height={20} />
               <h2 className="text-3xl font-bold text-secondary font-heading">Who We Are</h2>
             </div>
               <h3 className="text-4xl font-bold text-secondary font-heading">Empowering You Through Real Estate</h3>
