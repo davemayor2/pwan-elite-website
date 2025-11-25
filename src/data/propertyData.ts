@@ -74,6 +74,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
       'All plots are clearly demarcated with transparent documentation and swift allocation.',
     ],
     amenities: ['Perimeter Fencing', 'Road Network', 'Security Gatehouse', 'Streetlights'],
+    subscriptionFormUrl: '/LAVENDER COURTS AWKA SUBS FORM 8M.pdf',
   },
   'aku-ruo-uno': {
     slug: 'aku-ruo-uno',
@@ -122,6 +123,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
       'Constant Electricity Supply',
       'Functional Street Lights',
     ],
+    subscriptionFormUrl: '/LAVENDER FARM CITY ASABA.pdf',
   },
   'kole-ayo-estate': {
     slug: 'kole-ayo-estate',
