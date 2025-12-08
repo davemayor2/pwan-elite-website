@@ -12,7 +12,7 @@ export default function Hero() {
   useEffect(() => {
     // Try to fetch as a Blob to avoid proxies/tunnels forcing download behavior
     let objectUrl: string | null = null;
-    fetch('/heroSectionVid.mp4', { headers: { Range: 'bytes=0-' } })
+    fetch('/heroSectionVid.gif', { headers: { Range: 'bytes=0-' } })
       .then(res => res.ok ? res.blob() : Promise.reject(res.statusText))
       .then(blob => {
         objectUrl = URL.createObjectURL(blob);
