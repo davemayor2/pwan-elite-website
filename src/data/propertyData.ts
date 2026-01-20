@@ -102,8 +102,8 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     title: 'Lavender Farm City Asaba',
     location: 'Obomkpa Issele-Uku, Asaba, Delta State',
     tagline: 'A serene and affordable estate combining nature, accessibility, and modern estate planning.',
-    heroImage: '/FarmCity.jpeg',
-    images: ['/FarmCity.jpeg', '/eastView.png', '/urbanLegacy.jpg'],
+    heroImage: '/Lavender Farm City 1.5M.jpeg',
+    images: ['/Lavender Farm City 1.5M.jpeg', '/eastView.png', '/urbanLegacy.jpg'],
     price: '₦750,000',
     titleType: 'Registered Survey & Deed of Assignment',
     plotSize: '464 SQM',
@@ -123,7 +123,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
       'Constant Electricity Supply',
       'Functional Street Lights',
     ],
-    subscriptionFormUrl: '/LAVENDER FARM CITY ASABA.pdf',
+    subscriptionFormUrl: '/LAVENDER FARM CITY ASABA 1.5M.pdf',
   },
   'kole-ayo-estate': {
     slug: 'kole-ayo-estate',
@@ -314,6 +314,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
       'This land property is buy and build, it has been fenced, plotted and allocation is immediately available. With the right vision and planning, this land property has the potential to become a thriving hub of activity, offering a strong potential for returns on investment.',
     ],
     amenities: ['Perimeter Fencing', 'Fully Plotted', 'Immediate Allocation', 'Road Network', 'Security'],
+    subscriptionFormUrl: '/ELITE CASA  SUBS FORM 9M new.pdf',
   },
   'elite-eastland-phase-2': {
     slug: 'elite-eastland-phase-2',
@@ -333,6 +334,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
       'The estate\'s strategic position along the Port-Harcourt Owerri Express Road ensures excellent accessibility and connectivity to major cities and transport routes. With its proximity to educational institutions, hospitals, and commercial facilities, Elite Eastland Phase 2 offers a unique opportunity for both residential living and long-term investment appreciation.',
     ],
     amenities: ['Perimeter Fencing', 'Road Network', 'Security', 'Streetlights'],
+    subscriptionFormUrl: '/ELITE EASTLAND PHASE 2 ESTATE  SUBS FORM 5.5M new.pdf',
   },
   'ugwumba-estate': {
     slug: 'ugwumba-estate',

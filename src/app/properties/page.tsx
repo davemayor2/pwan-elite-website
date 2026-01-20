@@ -47,7 +47,7 @@ const PROPERTIES: Property[] = [
     type: 'Commercial',
     description: 'Strategically close to academic and health institutions. Great for land banking and immediate development.',
     tags: ['Flexible Payment Plan', 'Installment Option', 'Secure Investment'],
-    image: '/FarmCity.jpeg',
+    image: '/Lavender Farm City 1.5M.jpeg',
     titleDocument: 'Deed of Assignment',
     price: '750K - 1.5M',
     slug: 'lavender-farm-city-asaba',
