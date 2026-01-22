@@ -45,7 +45,7 @@ const PROPERTIES: Property[] = [
   {
     title: 'Kole-Ayo',
     description:
-      'Located at Anobi London Road, Irangushi, Epe, Kole Ayo Estate comes with a Freehold title and immediate allocation. It's near major landmarks like YabaTech Epe, LASUED, and St. Augustine University. Fenced, plotted, and ready for development—ideal for investors or homebuyers in a fast-growing area.',
+      'Located at Anobi London Road, Irangushi, Epe, Kole Ayo Estate comes with a Freehold title and immediate allocation. It\'s near major landmarks like YabaTech Epe, LASUED, and St. Augustine University. Fenced, plotted, and ready for development - ideal for investors or homebuyers in a fast-growing area.',
     priceLabel: 'FROM ₦3M',
     image: '/koleAyo.png',
     tag: 'INSTANT ALLOCATION',
