@@ -45,15 +45,39 @@ const PROPERTIES: Property[] = [
   {
     title: 'Kole-Ayo',
     description:
-      'Located at Anobi London Road, Irangushi, Epe, Kole Ayo Estate comes with a Freehold title and immediate allocation. It’s near major landmarks like YabaTech Epe, LASUED, and St. Augustine University. Fenced, plotted, and ready for development—ideal for investors or homebuyers in a fast-growing area.',
+      'Located at Anobi London Road, Irangushi, Epe, Kole Ayo Estate comes with a Freehold title and immediate allocation. It's near major landmarks like YabaTech Epe, LASUED, and St. Augustine University. Fenced, plotted, and ready for development—ideal for investors or homebuyers in a fast-growing area.',
     priceLabel: 'FROM ₦3M',
     image: '/koleAyo.png',
     tag: 'INSTANT ALLOCATION',
     slug: 'kole-ayo-estate',
   },
-
- 
-  
+  {
+    title: 'Lavender Garden Estate',
+    description:
+      'Premium residential land development in Obomkpa, Issele-Uku, Asaba. Each plot comes with Registered Survey & Deed of Assignment. Strategically located near NYSC Orientation Camp, Federal Medical Centre, and College of Nursing.',
+    priceLabel: '₦1,500,000',
+    image: '/Lavender Farm City 1.5M.jpeg',
+    tag: 'NEW ESTATE',
+    slug: 'lavender-garden-estate',
+  },
+  {
+    title: 'Haven Residence',
+    description:
+      'Premium residential apartments and terraces in Shelter Afrique Extension, Uyo. Experience modern architecture designed for comfort and urban elegance. Available units from 1 Bedroom Mezzanine to 4 Bedroom Maisonette.',
+    priceLabel: 'FROM ₦62M',
+    image: '/eliteHaven.jpg',
+    tag: 'NOW SELLING',
+    slug: 'haven-residence',
+  },
+  {
+    title: 'Lavender Park Estate',
+    description:
+      'Build your future in a prime destination in Asaba. Located in Obulu Okiti with Registered Survey & Deed of Assignment. Instant allocation with initial deposit of ₦1,000,000. Near Federal Housing Estate and Asaba International Airport.',
+    priceLabel: '₦3,000,000',
+    image: '/Lavender Farm City 1.5M.jpeg',
+    tag: 'INSTANT ALLOCATION',
+    slug: 'lavender-park-estate',
+  },
 ];
 
 export default function FeaturedListings() {
