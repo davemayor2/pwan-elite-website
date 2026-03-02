@@ -27,7 +27,7 @@ const PROPERTIES: Property[] = [
   {
     title: 'Aku Ruo Uno',
     description:
-      'Located in Achalla Ibusa, Asaba. Currently selling for 10m. It is also located in a buy and build environment, with houses already in site on the property, and along a major road.',
+      'Located in Achalla Ibusa, Asaba. Currently selling for 15m. It is also located in a buy and build environment, with houses already in site on the property, and along a major road.',
     priceLabel: '100% ALLOCATION',
     image: '/akuRuo.png',
     tag: 'PHASE 2',
@@ -37,7 +37,7 @@ const PROPERTIES: Property[] = [
     title: 'Lavender Farm City Asaba',
     description:
       'Located in Asaba, Delta State. Strategically close to academic and health institutions. Great for land banking and immediate development.',
-    priceLabel: 'STARTING AT ₦750K',
+    priceLabel: 'STARTING AT ₦1.5M',
     image: '/FarmCity.jpeg',
     tag: 'SELLING FAST',
     slug: 'lavender-farm-city-asaba',
@@ -45,7 +45,7 @@ const PROPERTIES: Property[] = [
   {
     title: 'Kole-Ayo',
     description:
-      'Located at Anobi London Road, Irangushi, Epe, Kole Ayo Estate comes with a Freehold title and immediate allocation. It\'s near major landmarks like YabaTech Epe, LASUED, and St. Augustine University. Fenced, plotted, and ready for development - ideal for investors or homebuyers in a fast-growing area.',
+      'Located at Anobi London Road, Irangushi, Epe, Kole Ayo Estate comes with a Freehold title and immediate allocation.',
     priceLabel: 'FROM ₦3M',
     image: '/koleAyo.png',
     tag: 'INSTANT ALLOCATION',

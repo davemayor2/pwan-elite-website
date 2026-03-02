@@ -3,8 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-red: #E20000;
-  --secondary-navy: #3E4095;
+  --primary-red: #F9A430;
+  --secondary-navy: #145E3D;
   --white: #ffffff;
   --black: #000000;
   --yellow: #FFD700;
@@ -53,7 +53,7 @@ body {
   padding: 0;
 }
 
-/* Custom utility classes for PWAN ELITE */
+/* Custom utility classes for EliteHub Properties */
 .bg-primary {
   background-color: var(--primary-red);
 }
@@ -155,7 +155,7 @@ body {
 
 /* Glassmorphism helpers */
 .glass-red {
-  background: rgba(226, 0, 0, 0.35); /* primary red with transparency */
+  background: rgba(249, 164, 48, 0.35); /* primary with transparency */
   border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(12px);
 }

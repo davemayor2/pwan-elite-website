@@ -23,21 +23,21 @@ const testimonials: Testimonial[] = [
   {
     title: '“I finally own my first land!”',
     body:
-      'Buying land used to feel complicated until I met PWAN ELITE. Their team guided me patiently, explained everything clearly, and helped me secure my first plot in Ibeju-Lekki without stress. I\'m now planning my second purchase!',
+      'Buying land used to feel complicated until I met EliteHub Properties. Their team guided me patiently, explained everything clearly, and helped me secure my first plot in Ibeju-Lekki without stress. I\'m now planning my second purchase!',
     author: 'Chioma E.',
     location: 'Lagos',
   },
   {
     title: '“Honest and reliable company.”',
     body:
-      'PWAN ELITE delivers exactly what they promise. The land was genuine, documents were handled smoothly, and the team was professional from start to finish. I recommend them to anyone who values peace of mind.',
+      'EliteHub Properties delivers exactly what they promise. The land was genuine, documents were handled smoothly, and the team was professional from start to finish. I recommend them to anyone who values peace of mind.',
     author: 'Mr. Adewale O.',
     location: 'Ibadan',
   },
   {
     title: '“Transparent process from day one.”',
     body:
-      'From enquiry to allocation, the communication was clear and timely. I always knew the next step and felt very confident about my investment with PWAN ELITE.',
+      'From enquiry to allocation, the communication was clear and timely. I always knew the next step and felt very confident about my investment with EliteHub Properties.',
     author: 'Amaka N.',
     location: 'Abuja',
   },
@@ -56,7 +56,7 @@ export default function Testimonials() {
               </h2>
             </div>
             <p className="max-w-2xl text-[#555]">
-              At PWAN ELITE, our greatest achievement is seeing our clients&apos; dreams come true. Every story reminds us why
+              At EliteHub Properties, our greatest achievement is seeing our clients&apos; dreams come true. Every story reminds us why
               we do what we do — making land ownership simple, transparent, and rewarding.
             </p>
           </div>

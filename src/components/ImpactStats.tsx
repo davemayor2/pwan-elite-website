@@ -130,7 +130,7 @@ export default function ImpactStats() {
     <section ref={sectionRef} className="bg-secondary text-white border-t-4 border-primary">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <h3 className="text-center font-heading text-xl md:text-2xl mb-8">
-          PWAN ELITE by the Numbers
+          EliteHub Properties by the Numbers
         </h3>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-6 text-center">

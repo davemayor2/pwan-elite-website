@@ -95,7 +95,7 @@ export default function AboutPage() {
               <div className="relative h-96 lg:h-[300px]">
               <Image
                 src="/pexels-davidmcbee-1546168.jpg"
-                alt="PWAN Elite Team"
+                alt="EliteHub Properties Team"
                 fill
                 className="object-cover"
               />
@@ -107,10 +107,10 @@ export default function AboutPage() {
               <div className="space-y-6">
               <div>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  PWAN Elite Realtors & Investment Ltd is a Real Estate Network Marketing Company established in 2021 and registered with the Corporate Affairs Commission as PWAN Elite Realtors & Investment Ltd. We are proudly licensed by the Lagos State Real Estate Regulatory Authority (LASRERA) and fully committed to delivering secure, accessible, and high-value land investment opportunities across Nigeria.
+                  EliteHub Properties Realtors & Investment Ltd is a Real Estate Network Marketing Company established in 2021 and registered with the Corporate Affairs Commission as EliteHub Properties Realtors & Investment Ltd. We are proudly licensed by the Lagos State Real Estate Regulatory Authority (LASRERA) and fully committed to delivering secure, accessible, and high-value land investment opportunities across Nigeria.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  We are developers of prosperity. PWAN Elite has grown into a premium, value-driven real estate brand known for trust, transparency, and timely delivery. Our projects are carefully curated for high returns on investment, with flexible, investor-friendly payment structures designed to accommodate every income level.
+                  We are developers of prosperity. EliteHub Properties has grown into a premium, value-driven real estate brand known for trust, transparency, and timely delivery. Our projects are carefully curated for high returns on investment, with flexible, investor-friendly payment structures designed to accommodate every income level.
                 </p>
               </div>
               </div>
@@ -125,7 +125,7 @@ export default function AboutPage() {
             </p>
             
             <p className="text-gray-700 leading-relaxed">
-              PWAN Elite is the proud owner of Urban Legacy Estate in Lagos, Elite City Estate and Elite Haven in Asaba, and Elite Empire Estate in Owerri, among many others — each one a symbol of our commitment to smart investment and modern living.
+              EliteHub Properties is the proud owner of Urban Legacy Estate in Lagos, Elite City Estate and Elite Haven in Asaba, and Elite Empire Estate in Owerri, among many others — each one a symbol of our commitment to smart investment and modern living.
             </p>
             
             <p className="text-gray-700 leading-relaxed">
@@ -133,7 +133,7 @@ export default function AboutPage() {
             </p>
             
             <p className="text-gray-700 leading-relaxed font-semibold">
-              At PWAN Elite, we don&apos;t just sell land — we build futures, create wealth, and open doors to generational prosperity.
+              At EliteHub Properties, we don&apos;t just sell land — we build futures, create wealth, and open doors to generational prosperity.
             </p>
             </div>
           </AnimateOnScroll>

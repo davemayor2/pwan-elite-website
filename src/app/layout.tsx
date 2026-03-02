@@ -15,17 +15,20 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "PWAN Elite - Building Wealth Through Real Estate Ownership",
-  description: "Secure your future with premium land investments from Nigeria's trusted real estate network. PWAN Elite offers verified properties, flexible payment plans, and expert advisory services.",
-  keywords: "real estate, property investment, land sales, Nigeria real estate, PWAN Elite, property development",
-  authors: [{ name: "PWAN Elite" }],
+  title: "EliteHub Properties - Building Wealth Through Real Estate Ownership",
+  description: "Secure your future with premium land investments from Nigeria's trusted real estate network. EliteHub Properties offers verified properties, flexible payment plans, and expert advisory services.",
+  keywords: "real estate, property investment, land sales, Nigeria real estate, EliteHub Properties, property development",
+  authors: [{ name: "EliteHub Properties" }],
   icons: {
-    icon: "/PWANlogo.png",
-    shortcut: "/PWANlogo.png",
-    apple: "/PWANlogo.png",
+    icon: [
+      { url: "/elitehub.webp", type: "image/webp", sizes: "32x32" },
+      { url: "/elitehub.webp", type: "image/webp", sizes: "16x16" },
+    ],
+    shortcut: "/elitehub.webp",
+    apple: "/elitehub.webp",
   },
   openGraph: {
-    title: "PWAN Elite - Building Wealth Through Real Estate Ownership",
+    title: "EliteHub Properties - Building Wealth Through Real Estate Ownership",
     description: "Secure your future with premium land investments from Nigeria's trusted real estate network.",
     type: "website",
     locale: "en_US",

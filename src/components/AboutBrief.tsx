@@ -10,7 +10,7 @@ export default function AboutBrief() {
         {/* Eyebrow */}
         <AnimateOnScroll direction="fade">
           <div className="text-center mb-4 flex items-center justify-center gap-3">
-          <Image src="/About Us heading Svg.svg" alt="About heading mark" width={65} height={33} />
+          <Image src="/asset1.webp" alt="About heading mark" width={65} height={33} />
           <span className="inline-block text-secondary font-heading font-semibold tracking-wide">About Us</span>
           </div>
         </AnimateOnScroll>
@@ -27,7 +27,7 @@ export default function AboutBrief() {
         {/* Intro */}
         <AnimateOnScroll direction="fade" delay={0.2}>
           <p className="max-w-5xl mx-auto text-center text-gray-700 font-body mb-10">
-          PWAN Elite Realtors & Investment Ltd is a Real Estate Network Marketing Company established in 2021 and registered with the Corporate Affairs Commission as PWAN Elite Realtors & Investment Ltd. We are proudly licensed by the Lagos State Real Estate Regulatory Authority (LASRERA) and fully committed to delivering secure, accessible, and high-value land investment opportunities across Nigeria.
+          EliteHub Properties Realtors & Investment Ltd is a Real Estate Network Marketing Company established in 2021 and registered with the Corporate Affairs Commission as EliteHub Properties Realtors & Investment Ltd. We are proudly licensed by the Lagos State Real Estate Regulatory Authority (LASRERA) and fully committed to delivering secure, accessible, and high-value land investment opportunities across Nigeria.
           </p>
         </AnimateOnScroll>
 
@@ -38,7 +38,7 @@ export default function AboutBrief() {
             <div className="relative min-h-[280px] md:min-h-[360px] lg:min-h-0 lg:row-span-2 lg:h-full bg-gray-200">
               <Image
               src="/shot1.jpeg"
-              alt="PWAN Elite Clients"
+              alt="EliteHub Properties Clients"
               fill
               className="object-cover"
               priority

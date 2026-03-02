@@ -80,7 +80,7 @@ export default function Hero() {
       <div className="max-w-4xl mx-auto px-4 text-center relative z-20">
         {/* STARLINE above eyebrow */}
         <div className="mb-4 flex justify-center">
-          <Image src="/STARLINE.svg" alt="Divider star line" width={418} height={24} />
+          <Image src="/asset2.webp" alt="Divider star line" width={418} height={24} />
         </div>
 
         {/* Eyebrow - Glassmorphism with icon (red tint + rounded) */}

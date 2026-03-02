@@ -48,7 +48,7 @@ export default function Navbar() {
     }`}>
       {/* Top Bar - Contact & Social Media with Background Image */}
       <div className="relative text-white py-2 sm:py-2.5 lg:py-3 overflow-hidden text-xs sm:text-sm" style={{
-        backgroundImage: 'url(/navbar-frame.png)',
+        backgroundImage: 'url(/Frame%2048.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -107,8 +107,8 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center flex-shrink-0">
               <Image
-                src="/PWANlogo.png"
-                alt="PWAN Elite Logo"
+                src="/elitehub.webp"
+                alt="EliteHub Properties Logo"
                 width={100}
                 height={100}
                 className="object-contain"
@@ -144,12 +144,12 @@ export default function Navbar() {
                 {isAboutDropdownOpen && (
                   <div className="absolute top-full left-0 w-48 bg-white shadow-lg border border-gray-200 z-50">
                     <Link href="/about" className={`block px-4 py-3 text-sm transition-colors ${
-                      isActive('/about') ? 'text-primary font-bold bg-red-50' : 'text-gray-600 hover:text-primary hover:bg-gray-50'
+                      isActive('/about') ? 'text-primary font-bold bg-orange-50' : 'text-gray-600 hover:text-primary hover:bg-gray-50'
                     }`}>
                       Who We Are
                     </Link>
                     <Link href="/about/team" className={`block px-4 py-3 text-sm transition-colors ${
-                      isActive('/about/team') ? 'text-primary font-bold bg-red-50' : 'text-gray-600 hover:text-primary hover:bg-gray-50'
+                      isActive('/about/team') ? 'text-primary font-bold bg-orange-50' : 'text-gray-600 hover:text-primary hover:bg-gray-50'
                     }`}>
                       Our Team
                     </Link>

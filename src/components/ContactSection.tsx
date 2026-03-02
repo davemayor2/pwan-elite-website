@@ -46,9 +46,6 @@ export default function ContactSection() {
           {/* Red vertical ribbon with rotated text */}
           <div className="absolute lg:inset-y-0 lg:right-0 bg-primary flex items-center justify-center lg:w-[240px] px-6 py-3 sm:px-8 sm:py-4 lg:px-0 lg:py-0">
             <div className="flex lg:flex-col lg:items-center lg:justify-center gap-2 lg:gap-0">
-              <span className="text-white/90 uppercase tracking-[0.25em] text-xs lg:text-sm font-heading lg:-rotate-90 lg:-translate-y-12">
-                Here to Serve
-              </span>
               <span className="text-white font-heading font-semibold text-lg sm:text-xl lg:text-4xl leading-none lg:-rotate-90 whitespace-nowrap lg:translate-y-12">
                 Feel Free to Contact Us
               </span>
@@ -70,7 +67,7 @@ export default function ContactSection() {
         <AnimateOnScroll direction="right" className="lg:col-span-7 h-full">
           <div className="bg-secondary py-12 px-6 lg:px-10 flex items-center justify-center h-full">
           {/* Framed contact card */}
-          <div className="relative z-10 w-full max-w-[820px] border-[20px] border-[#3E4095] lg:-ml-6 xl:-ml-8">
+          <div className="relative z-10 w-full max-w-[820px] border-[20px] border-[#145E3D] lg:-ml-6 xl:-ml-8">
             <div className="bg-[#2B2E83] p-6 md:p-8 text-white">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input type="hidden" name="access_key" value="58280fc8-b4a5-4717-88ed-db34dac3833a" />

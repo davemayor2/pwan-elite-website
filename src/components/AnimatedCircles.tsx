@@ -14,7 +14,7 @@ export default function AnimatedCircles() {
           cy="300"
           r="280"
           fill="none"
-          stroke="#E20000"
+          stroke="#F9A430"
           strokeWidth="1"
         />
         
@@ -24,7 +24,7 @@ export default function AnimatedCircles() {
           cy="300"
           r="200"
           fill="none"
-          stroke="#E20000"
+          stroke="#F9A430"
           strokeWidth="1"
         />
         
@@ -35,7 +35,7 @@ export default function AnimatedCircles() {
             cy="300"
             r="8"
             fill="white"
-            stroke="#E20000"
+            stroke="#F9A430"
             strokeWidth="1"
             className="outer-dot"
           />
@@ -47,7 +47,7 @@ export default function AnimatedCircles() {
             cx="500"
             cy="300"
             r="8"
-            fill="#E20000"
+            fill="#F9A430"
             className="inner-dot"
           />
         </g>

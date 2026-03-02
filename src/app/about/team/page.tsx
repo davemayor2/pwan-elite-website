@@ -18,11 +18,11 @@ export default function OurTeamPage() {
             
             <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
               Behind every successful transaction is a passionate team of professionals driven by excellence and service. 
-              At PWAN ELITE, our people are our greatest asset — combining real estate expertise with a genuine desire 
+              At EliteHub Properties, our people are our greatest asset — combining real estate expertise with a genuine desire 
               to see every client succeed.
             </p>
             
-            <Link href="/contact" className="inline-block bg-primary text-white px-8 py-4 font-semibold text-lg hover:bg-red-700 transition-colors mb-12">
+            <Link href="/contact" className="inline-block bg-primary text-white px-8 py-4 font-semibold text-lg hover:bg-[#e09420] transition-colors mb-12">
               Contact Our Team Today
             </Link>
           </div>
@@ -32,7 +32,7 @@ export default function OurTeamPage() {
       {/* Full Width Hero SVG Image */}
       <section className="w-full">
         <Image
-          src="/OUR TEAM HERO.svg"
+          src="/aboutUShero.webp"
           alt="Our Team Hero"
           width={1920}
           height={600}
@@ -65,7 +65,7 @@ export default function OurTeamPage() {
               
               {/* Name and Title */}
               <h3 className="font-bold text-secondary mb-2 text-2xl font-heading">Emeka Justine</h3>
-              <p className="text-primary text-lg font-semibold">Managing Director, PWAN Elite</p>
+              <p className="text-primary text-lg font-semibold">Managing Director, EliteHub Properties</p>
             </div>
           </div>
 
@@ -177,31 +177,7 @@ export default function OurTeamPage() {
               <p className="text-primary text-sm font-semibold">Accounts Assistant, Lagos</p>
             </div>
 
-            <div className="bg-white text-center">
-              <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
-                <Image
-                  src="/naomi1.png"
-                  alt="Eze Ijeoma"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="font-bold text-secondary mb-1 text-lg font-heading">Eze Ijeoma</h3>
-              <p className="text-primary text-sm font-semibold">Content Strategist, Lagos</p>
-            </div>
-
-            <div className="bg-white text-center">
-              <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
-                <Image
-                  src="/chisom1.png"
-                  alt="Chisom Ogoke"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="font-bold text-secondary mb-1 text-lg font-heading">Chisom Ogoke</h3>
-              <p className="text-primary text-sm font-semibold">Operations Surveyor, Lagos</p>
-            </div>
+            
 
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
@@ -214,6 +190,19 @@ export default function OurTeamPage() {
               </div>
               <h3 className="font-bold text-secondary mb-1 text-lg font-heading">Amarachi</h3>
               <p className="text-primary text-sm font-semibold">Administrative Officer, Lagos</p>
+            </div>
+
+            <div className="bg-white text-center">
+              <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
+                <Image
+                  src="/naomi1.png"
+                  alt="Eze Ijeoma"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="font-bold text-secondary mb-1 text-lg font-heading">Eze Ijeoma</h3>
+              <p className="text-primary text-sm font-semibold">Content Strategist, Lagos</p>
             </div>
           </div>
         </div>
@@ -278,7 +267,7 @@ export default function OurTeamPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6 font-heading">
               Want to Work with Our Experts?
             </h2>
-            <Link href="/contact" className="inline-block bg-primary text-white px-8 py-4 font-semibold text-lg hover:bg-red-700 transition-colors">
+            <Link href="/contact" className="inline-block bg-primary text-white px-8 py-4 font-semibold text-lg hover:bg-[#e09420] transition-colors">
               Contact Us
             </Link>
           </div>

@@ -13,15 +13,15 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-3">
               <Image
-                src="/PWANlogo.png"
-                alt="PWAN Elite Logo"
+                src="/elitehub.webp"
+                alt="EliteHub Properties Logo"
                 width={80}
                 height={80}
                 className="object-contain"
               />
             </Link>
             <p className="text-sm opacity-90 leading-relaxed">
-              Empowering your success with land expertise. PWAN Elite is your trusted partner in real estate investment and property development across Nigeria.
+              Empowering your success with land expertise. EliteHub Properties is your trusted partner in real estate investment and property development across Nigeria.
             </p>
             <div className="flex items-center space-x-3">
               <a href="#" className="bg-white border border-secondary w-8 h-8 flex items-center justify-center text-secondary hover:bg-primary hover:text-white transition-colors">
@@ -102,16 +102,16 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-600 mt-8 pt-6 text-center">
           <p className="text-sm opacity-90">
-            © {new Date().getFullYear()} PWAN Elite. All rights reserved.
+            © {new Date().getFullYear()} EliteHub Properties. All rights reserved.
           </p>
         </div>
       </div>
 
-      {/* Large PWAN ELITE SVG Background */}
+      {/* Large SVG Background (image path unchanged per rebrand) */}
       <div className="absolute bottom-0 left-0 w-full h-[220px] opacity-50 pointer-events-none">
         <Image
           src="/PWANELITE FOOTER BIG TEXT.svg"
-          alt="PWAN ELITE"
+          alt="EliteHub Properties"
           fill
           className="object-cover"
         />

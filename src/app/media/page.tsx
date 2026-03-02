@@ -19,7 +19,7 @@ type MediaItem = {
 const MEDIA_ITEMS: MediaItem[] = [
   {
     id: '1',
-    title: 'PWAN ELITE Launches New Estate Development in Awka',
+    title: 'EliteHub Properties Launches New Estate Development in Awka',
     date: 'December 15, 2024',
     category: 'News',
     image: '/maximillian-conacher-sPpe2D7VbpM-unsplash.jpg',
@@ -37,7 +37,7 @@ const MEDIA_ITEMS: MediaItem[] = [
   },
   {
     id: '3',
-    title: 'PWAN ELITE Wins Best Real Estate Company Award',
+    title: 'EliteHub Properties Wins Best Real Estate Company Award',
     date: 'November 10, 2024',
     category: 'Press',
     image: '/pexels-fauxels-3184465.jpg',
@@ -109,7 +109,7 @@ export default function MediaPage() {
         <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 relative z-10 py-24">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-heading leading-tight">
-              Stay Updated with PWAN ELITE
+              Stay Updated with EliteHub Properties
             </h1>
             <p className="text-xl text-gray-200 mb-8 leading-relaxed">
               Explore our latest news, events, and media highlights from the real estate industry.

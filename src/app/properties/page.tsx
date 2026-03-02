@@ -25,7 +25,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'A luxury estate in Awka offering affordability, security, and modern development.',
     tags: ['Title: C of O', 'Flexible Payment Plan', 'Secure Environment'],
-    image: '/lavenderCourts.jpeg',
+    image: '/ESTATE FLYERS/12.jpg',
     titleDocument: 'C of O',
     price: '5M - 10M',
     slug: 'lavender-courts',
@@ -36,7 +36,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'Premium plots located minutes away from Asaba College of Education.',
     tags: ['Promo Price Available', 'Installment Option', 'Verified Documents'],
-    image: '/akuRuo.png',
+    image: '/ESTATE FLYERS/1.jpg',
     titleDocument: 'Survey',
     price: '5M - 10M',
     slug: 'aku-ruo-uno',
@@ -47,7 +47,7 @@ const PROPERTIES: Property[] = [
     type: 'Commercial',
     description: 'Strategically close to academic and health institutions. Great for land banking and immediate development.',
     tags: ['Flexible Payment Plan', 'Installment Option', 'Secure Investment'],
-    image: '/Lavender Farm City 1.5M.jpeg',
+    image: '/ESTATE FLYERS/LFC.jpeg',
     titleDocument: 'Deed of Assignment',
     price: '750K - 1.5M',
     slug: 'lavender-farm-city-asaba',
@@ -58,7 +58,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'Freehold land with immediate allocation and excellent ROI prospects within a thriving corridor.',
     tags: ['Title: C of O', 'Secure Environment', 'Verified Documents'],
-    image: '/koleAyo.png',
+    image: '/ESTATE FLYERS/5.jpg',
     titleDocument: 'C of O',
     price: '5M - 10M',
     slug: 'kole-ayo-estate',
@@ -69,7 +69,7 @@ const PROPERTIES: Property[] = [
     type: 'Commercial',
     description: 'Prime location with modern infrastructure. Perfect for residential and commercial development.',
     tags: ['Flexible Payment Plan', 'Secure Investment', 'Verified Documents'],
-    image: '/eliteCity.png',
+    image: '/ESTATE FLYERS/3.jpg',
     titleDocument: 'Governor\'s Consent',
     price: '5M - 10M',
     slug: 'elite-city-estate',
@@ -80,7 +80,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'Tranquil living environment with excellent connectivity and growing community infrastructure.',
     tags: ['Installment Option', 'Secure Environment', 'Title: C of O'],
-    image: '/eliteHaven.jpg',
+    image: '/ESTATE FLYERS/7.jpg',
     titleDocument: 'C of O',
     price: '1.5M - 3M',
     slug: 'elite-haven',
@@ -91,7 +91,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'Located at Ebute kekere way, Afolabi bus stop, Igando road Lagos. Urban Legacy This land is situated in a prime location within a built-up environment, boasting excellent accessibility to major roads and public transportation.',
     tags: ['Title: C of O', 'Flexible Payment Plan', 'Secure Environment'],
-    image: '/urbanLegacy.jpg',
+    image: '/ESTATE FLYERS/6.jpg',
     titleDocument: 'C of O',
     price: '10M - 15M',
     slug: 'urban-legacy',
@@ -102,7 +102,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'Located at Ebute kekere way, Afolabi bus stop, Igando road Lagos. Urban Legacy This land is situated in a prime location within a built-up environment, boasting excellent accessibility to major roads and public transportation.',
     tags: ['Title: C of O', 'Flexible Payment Plan', 'Secure Environment'],
-    image: '/eastView.png',
+    image: '/ESTATE FLYERS/2.jpg',
     titleDocument: 'C of O',
     price: '3M - 5M',
     slug: 'eastview-estate',
@@ -113,7 +113,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'Located in Ochicha, Obike , Ngor -Okpala. Alaoma Luxury is located in an area with great prospect on high return on investment.',
     tags: ['Title: Survey', 'Flexible Payment Plan', 'Secure Environment'],
-    image: '/alaomaLuxury.png',
+    image: '/ESTATE FLYERS/8.jpg',
     titleDocument: 'Survey',
     price: '1.5M - 3M',
     slug: 'alaoma-luxury-estate',
@@ -124,7 +124,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'Elite Empire is strategically located in Avu-Oforola, a fast-growing area ideal for premium real estate investment. Surrounded by notable landmarks like Control Bus Stop, Avu Junction, Imo State Automobile Hub, and Deeper Life Camp Ground.',
     tags: ['Title: C of O', 'Flexible Payment Plan', 'Secure Environment'],
-    image: '/eliteEmpire.png',
+    image: '/ESTATE FLYERS/9.jpg',
     titleDocument: 'C of O',
     price: '5M - 10M',
     slug: 'elite-empire',
@@ -135,7 +135,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'Located in Umueze Ibusa, Asaba, Obieze 2 is selling for ₦10M in a fast-developing, buy-and-build area along a major road.',
     tags: ['Title: Freehold', 'Flexible Payment Plan', 'Secure Environment'],
-    image: '/obiEze.png',
+    image: '/ESTATE FLYERS/11.jpg',
     titleDocument: 'Freehold',
     price: '5M - 10M',
     slug: 'obi-eze-estate',
@@ -146,7 +146,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'Located in Idasa, Agbara, this estate comes with a Certificate of Occupancy (C of O) and sits in a high-demand, fast-growing area ideal for residential or commercial development.',
     tags: ['Title: C of O', 'Flexible Payment Plan', 'Secure Environment'],
-    image: '/eliteCasa.jpeg',
+    image: '/ESTATE FLYERS/4.jpg',
     titleDocument: 'C of O',
     price: '5M - 10M',
     slug: 'elite-casa',
@@ -157,7 +157,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'Elite Eastland Phase 2 is a prime estate located in Umuelu, Umuagwo, Owerri, along the Port Harcourt–Owerri Expressway.',
     tags: ['Title: ', 'Flexible Payment Plan', 'Secure Environment'],
-    image: '/eliteEastland2.jpeg',
+    image: '/ESTATE FLYERS/4.jpg',
     titleDocument: 'C of O',
     price: '5M - 10M',
     slug: 'elite-eastland-phase-2',
@@ -168,7 +168,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'Elite Eastland Phase 2 is a prime estate located in Umuelu, Umuagwo, Owerri, along the Port Harcourt–Owerri Expressway.a',
     tags: ['Title: C of O', 'Flexible Payment Plan', 'Secure Environment'],
-    image: '/ugwumbaEstate.jpeg',
+    image: '/ESTATE FLYERS/10.jpg',
     titleDocument: 'C of O',
     price: '5M - 10M',
     slug: 'ugwumba-estate',
@@ -179,7 +179,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'Premium residential land development with Registered Survey & Deed of Assignment. Strategically located near NYSC Orientation Camp, Federal Medical Centre, and College of Nursing. Each plot is 464 SQM.',
     tags: ['Title: Deed of Assignment', 'Flexible Payment Plan', 'Secure Environment'],
-    image: '/LAVENDER GARDEN.jpeg',
+    image: '/ESTATE FLYERS/14.jpg',
     titleDocument: 'Deed of Assignment',
     price: '1.5M - 3M',
     slug: 'lavender-garden-estate',
@@ -190,7 +190,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'Premium residential apartments and terraces with modern architecture. Available units: 1 Bedroom Mezzanine (₦62M), 2 Bedroom Apartment (₦85M), 3 Bedroom Apartment (₦88M), 3 Bedroom Terrace (₦98M), 4 Bedroom Maisonette (₦118M).',
     tags: ['Title: Registered Documentation', 'Flexible Payment Plan', 'Investment Potential'],
-    image: '/HAVEN RESIDENCE.jpeg',
+    image: '/ESTATE FLYERS/13.jpg',
     titleDocument: 'Registered Documentation',
     price: '62M - 118M',
     slug: 'haven-residence',
@@ -201,7 +201,7 @@ const PROPERTIES: Property[] = [
     type: 'Residential',
     description: 'Build your future in a prime destination in Asaba. Each plot is 464 SQM with Registered Survey & Deed of Assignment. Instant allocation with initial deposit of ₦1,000,000. Strategically located near Federal Housing Estate and Asaba International Airport.',
     tags: ['Title: Deed of Assignment', 'Instant Allocation', 'Secure Environment'],
-    image: '/LAVENDER PARK.jpeg',
+    image: '/ESTATE FLYERS/13.jpg',
     titleDocument: 'Deed of Assignment',
     price: '3M - 5M',
     slug: 'lavender-park-estate',
@@ -367,7 +367,7 @@ export default function PropertiesPage() {
                 <div className="flex flex-col gap-2">
                   <button
                     onClick={handleApplyFilters}
-                    className="w-full px-6 py-3 bg-primary text-white font-semibold hover:bg-red-700 transition-colors"
+                    className="w-full px-6 py-3 bg-primary text-white font-semibold hover:bg-[#e09420] transition-colors"
                   >
                     Apply Filters
                   </button>
@@ -391,7 +391,7 @@ export default function PropertiesPage() {
                 <p className="text-xl text-gray-600 mb-4">No properties found matching your criteria.</p>
                 <button
                   onClick={handleResetFilters}
-                  className="px-6 py-3 bg-primary text-white font-semibold hover:bg-red-700 transition-colors"
+                  className="px-6 py-3 bg-primary text-white font-semibold hover:bg-[#e09420] transition-colors"
                 >
                   Reset Filters
                 </button>
@@ -486,7 +486,7 @@ export default function PropertiesPage() {
       <section className="py-16" style={{ backgroundColor: '#0E0D53' }}>
         <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">
-            Ready to Own a Piece of PWAN ELITE?
+            Ready to Own a Piece of EliteHub Properties?
           </h2>
           <p className="text-xl text-gray-200 mb-8">
             Let our team help you find the perfect estate that fits your vision and budget.

@@ -40,10 +40,10 @@ export default function WhyChooseUs() {
         <AnimateOnScroll direction="fade">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold text-secondary">
-              Why Choose <span className="text-primary">PWAN Elite</span>
+              Why Choose <span className="text-primary">EliteHub Properties</span>
             </h2>
             <p className="mt-3 mx-auto max-w-[700px] text-[#555]">
-              We don&apos;t just sell land — we help people build futures. PWAN ELITE stands for trust, quality,
+              We don&apos;t just sell land — we help people build futures. EliteHub Properties stands for trust, quality,
               and empowerment, creating lasting value through properties that appreciate and transform lives.
             </p>
           </div>
@@ -137,7 +137,7 @@ export default function WhyChooseUs() {
               <h3 className="font-bold text-black">Proven Track Record</h3>
             </div>
             <p className="mt-3 text-gray-600">
-              Hundreds of satisfied clients have achieved their real estate goals through PWAN ELITE — and you can be
+              Hundreds of satisfied clients have achieved their real estate goals through EliteHub Properties — and you can be
               the next success story.
             </p>
             </div>

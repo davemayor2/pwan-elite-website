@@ -11,7 +11,7 @@ export default function WhatsAppButton() {
   }, []);
 
   const phoneNumber = '+2348177500018';
-  const defaultMessage = 'Hello, I would like to make an enquiry about PWAN ELITE properties.';
+  const defaultMessage = 'Hello, I would like to make an enquiry about EliteHub Properties properties.';
   const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\s/g, '')}?text=${encodeURIComponent(defaultMessage)}`;
 
   if (!mounted) {
