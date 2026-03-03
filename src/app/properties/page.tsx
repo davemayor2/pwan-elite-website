@@ -27,7 +27,7 @@ const PROPERTIES: Property[] = [
     tags: ['Title: C of O', 'Flexible Payment Plan', 'Secure Environment'],
     image: '/ESTATE FLYERS/12.jpg',
     titleDocument: 'C of O',
-    price: '5M - 10M',
+    price: '6M - 12M',
     slug: 'lavender-courts',
   },
   {
