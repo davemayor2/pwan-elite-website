@@ -4,12 +4,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
+import { PROPERTY_DETAILS } from '@/data/propertyData';
 
 type Property = {
   title: string;
   description: string;
   priceLabel: string;
-  image: string;
   tag: string;
   slug: string;
 };
@@ -19,8 +19,7 @@ const PROPERTIES: Property[] = [
     title: 'Lavender Courts',
     description:
       'Lavender Courts Awka – where luxury meets affordability in one of Anambra\'s most promising locations. Located at Ndiukwuenu, Awka.',
-    priceLabel: 'SELLING AT ₦10M',
-    image: '/lavenderCourts.jpeg',
+    priceLabel: 'SELLING AT ₦12M',
     tag: 'NEW ESTATE',
     slug: 'lavender-courts',
   },
@@ -29,7 +28,6 @@ const PROPERTIES: Property[] = [
     description:
       'Located in Achalla Ibusa, Asaba. Currently selling for 15m. It is also located in a buy and build environment, with houses already in site on the property, and along a major road.',
     priceLabel: '100% ALLOCATION',
-    image: '/akuRuo.png',
     tag: 'PHASE 2',
     slug: 'aku-ruo-uno',
   },
@@ -38,7 +36,6 @@ const PROPERTIES: Property[] = [
     description:
       'Located in Asaba, Delta State. Strategically close to academic and health institutions. Great for land banking and immediate development.',
     priceLabel: 'STARTING AT ₦1.5M',
-    image: '/FarmCity.jpeg',
     tag: 'SELLING FAST',
     slug: 'lavender-farm-city-asaba',
   },
@@ -47,7 +44,6 @@ const PROPERTIES: Property[] = [
     description:
       'Located at Anobi London Road, Irangushi, Epe, Kole Ayo Estate comes with a Freehold title and immediate allocation.',
     priceLabel: 'FROM ₦3M',
-    image: '/koleAyo.png',
     tag: 'INSTANT ALLOCATION',
     slug: 'kole-ayo-estate',
   },
@@ -56,7 +52,6 @@ const PROPERTIES: Property[] = [
     description:
       'Premium residential land development in Obomkpa, Issele-Uku, Asaba. Each plot comes with Registered Survey & Deed of Assignment. Strategically located near NYSC Orientation Camp, Federal Medical Centre, and College of Nursing.',
     priceLabel: '₦1,500,000',
-    image: '/Lavender Farm City 1.5M.jpeg',
     tag: 'NEW ESTATE',
     slug: 'lavender-garden-estate',
   },
@@ -65,7 +60,6 @@ const PROPERTIES: Property[] = [
     description:
       'Premium residential apartments and terraces in Shelter Afrique Extension, Uyo. Experience modern architecture designed for comfort and urban elegance. Available units from 1 Bedroom Mezzanine to 4 Bedroom Maisonette.',
     priceLabel: 'FROM ₦62M',
-    image: '/eliteHaven.jpg',
     tag: 'NOW SELLING',
     slug: 'haven-residence',
   },
@@ -74,7 +68,6 @@ const PROPERTIES: Property[] = [
     description:
       'Build your future in a prime destination in Asaba. Located in Obulu Okiti with Registered Survey & Deed of Assignment. Instant allocation with initial deposit of ₦1,000,000. Near Federal Housing Estate and Asaba International Airport.',
     priceLabel: '₦3,000,000',
-    image: '/Lavender Farm City 1.5M.jpeg',
     tag: 'INSTANT ALLOCATION',
     slug: 'lavender-park-estate',
   },
@@ -130,7 +123,7 @@ export default function FeaturedListings() {
                 onMouseEnter={() => setActiveIdx(idx)}
               >
                 <Image
-                  src={p.image}
+                  src={PROPERTY_DETAILS[p.slug]?.heroImage ?? '/pexels-davidmcbee-1546168.jpg'}
                   alt={p.title}
                   fill
                   loading={idx === 0 ? 'eager' : 'lazy'}

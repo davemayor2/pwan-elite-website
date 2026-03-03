@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
   basePath: basePath ? basePath : undefined,
   assetPrefix: basePath ? basePath : undefined,
   trailingSlash: true,
+  images: { unoptimized: true },
 };
 
 export default nextConfig;

@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   authors: [{ name: "EliteHub Properties" }],
   icons: {
     icon: [
-      { url: "/elitehub.webp", type: "image/webp", sizes: "32x32" },
-      { url: "/elitehub.webp", type: "image/webp", sizes: "16x16" },
+      { url: "/elite%20hub%20logo.png", type: "image/png", sizes: "32x32" },
+      { url: "/elite%20hub%20logo.png", type: "image/png", sizes: "16x16" },
     ],
-    shortcut: "/elitehub.webp",
-    apple: "/elitehub.webp",
+    shortcut: "/elite%20hub%20logo.png",
+    apple: "/elite%20hub%20logo.png",
   },
   openGraph: {
     title: "EliteHub Properties - Building Wealth Through Real Estate Ownership",
