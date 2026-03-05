@@ -6,9 +6,9 @@
     "dev": "next dev",
     "dev:turbo": "next dev --turbopack",
     "dev:mobile": "next dev --turbopack",
-    "build": "next build",
-    "export": "next build",
-    "build:turbo": "next build --turbopack",
+    "build": "node --max-old-space-size=2048 node_modules/next/dist/bin/next build",
+    "export": "node --max-old-space-size=2048 node_modules/next/dist/bin/next build",
+    "build:turbo": "node --max-old-space-size=2048 node_modules/next/dist/bin/next build --turbopack",
     "start": "next start",
     "lint": "eslint"
   },
