@@ -98,7 +98,7 @@ export default function PropertiesPage() {
         <div className="absolute inset-0 bg-black/60"></div>
         
         {/* Content */}
-        <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 relative z-10 py-24">
+        <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 relative z-10 pt-40 pb-24">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-heading leading-tight">
               Our Land Listings

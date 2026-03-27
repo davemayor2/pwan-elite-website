@@ -56,7 +56,7 @@ export default function OurTeamPage() {
               {/* Picture Frame with Red Border */}
               <div className="relative w-[400px] h-[500px] mx-auto mb-6 border-4 border-primary">
                 <Image
-                  src="/emeka.jpg"
+                  src="/emeka.webp"
                   alt="Emeka Justine"
                   fill
                   className="object-cover"
@@ -76,7 +76,7 @@ export default function OurTeamPage() {
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
                 <Image
-                  src="/korede1.png"
+                  src="/korede1.webp"
                   alt="Korede Tiamiyu"
                   fill
                   className="object-cover"
@@ -89,7 +89,7 @@ export default function OurTeamPage() {
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
                 <Image
-                  src="/pius.png"
+                  src="/pius.webp"
                   alt="Pius Dabel"
                   fill
                   className="object-cover"
@@ -102,7 +102,7 @@ export default function OurTeamPage() {
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
                 <Image
-                  src="/1.png"
+                  src="/1.webp"
                   alt="Joshua Ihaza"
                   fill
                   className="object-cover"
@@ -115,7 +115,7 @@ export default function OurTeamPage() {
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
                 <Image
-                  src="/tochukwu1.png"
+                  src="/tochukwu1.webp"
                   alt="Isaiah Stanley"
                   fill
                   className="object-cover"
@@ -128,7 +128,7 @@ export default function OurTeamPage() {
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
                 <Image
-                  src="/favour.png"
+                  src="/favour.webp"
                   alt="Leo Favour"
                   fill
                   className="object-cover"
@@ -141,7 +141,7 @@ export default function OurTeamPage() {
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
                 <Image
-                  src="/david.png"
+                  src="/david.webp"
                   alt="Ola-John David"
                   fill
                   className="object-cover"
@@ -154,7 +154,7 @@ export default function OurTeamPage() {
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
                 <Image
-                  src="/waleGraphic1.png"
+                  src="/waleGraphic1.webp"
                   alt="Ayodele Olawale"
                   fill
                   className="object-cover"
@@ -167,7 +167,7 @@ export default function OurTeamPage() {
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
                 <Image
-                  src="/yinka1.png"
+                  src="/yinka1.webp"
                   alt="Olayinka Ikuomola"
                   fill
                   className="object-cover"
@@ -182,7 +182,7 @@ export default function OurTeamPage() {
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
                 <Image
-                  src="/amara1.png"
+                  src="/amara1.webp"
                   alt="Amarachi"
                   fill
                   className="object-cover"
@@ -195,7 +195,7 @@ export default function OurTeamPage() {
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
                 <Image
-                  src="/naomi1.png"
+                  src="/naomi1.webp"
                   alt="Eze Ijeoma"
                   fill
                   className="object-cover"
@@ -221,7 +221,7 @@ export default function OurTeamPage() {
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
                 <Image
-                  src="/iheanacho.png"
+                  src="/iheanacho.webp"
                   alt="Iheanacho Okoro"
                   fill
                   className="object-cover"
@@ -234,7 +234,7 @@ export default function OurTeamPage() {
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
                 <Image
-                  src="/Mama.png"
+                  src="/Mama.webp"
                   alt="Kalu Udodirim"
                   fill
                   className="object-cover"

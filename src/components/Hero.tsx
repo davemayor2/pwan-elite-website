@@ -12,7 +12,7 @@ export default function Hero() {
   useEffect(() => {
     // Try to fetch as a Blob to avoid proxies/tunnels forcing download behavior
     let objectUrl: string | null = null;
-    fetch('/heroSectionVid.gif', { headers: { Range: 'bytes=0-' } })
+    fetch('/heroSectionVid2.mp4', { headers: { Range: 'bytes=0-' } })
       .then(res => res.ok ? res.blob() : Promise.reject(res.statusText))
       .then(blob => {
         objectUrl = URL.createObjectURL(blob);
@@ -75,9 +75,9 @@ export default function Hero() {
       )}
       
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50 z-10"></div>
+      <div className="absolute inset-0 bg-black/70 z-10"></div>
       
-      <div className="max-w-4xl mx-auto px-4 text-center relative z-20">
+      <div className="max-w-4xl mx-auto px-4 text-center relative z-20 pt-24">
         {/* STARLINE above eyebrow */}
         <div className="mb-4 flex justify-center">
           <Image src="/asset2.webp" alt="Divider star line" width={418} height={24} />

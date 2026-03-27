@@ -94,7 +94,7 @@ export default function AboutPage() {
             <AnimateOnScroll direction="left" delay={0.2}>
               <div className="relative h-96 lg:h-[300px]">
               <Image
-                src="/pexels-davidmcbee-1546168.jpg"
+                src="/LandImg5.webp"
                 alt="EliteHub Properties Team"
                 fill
                 className="object-cover"
@@ -229,7 +229,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
                 <div className="relative h-48 lg:h-64">
                   <Image
-                    src="/maximillian-conacher-sPpe2D7VbpM-unsplash.jpg"
+                    src="/LandImg9.webp"
                     alt="Land Sales"
                     fill
                     className="object-cover"
@@ -285,7 +285,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
                 <div className="relative h-48 lg:h-64">
                   <Image
-                    src="/pexels-fauxels-3184465.jpg"
+                    src="/LandImg10.webp"
                     alt="Documentation Assistance"
                     fill
                     className="object-cover"
@@ -313,7 +313,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
                 <div className="relative h-48 lg:h-64">
                   <Image
-                    src="/pexels-davidmcbee-1546168.jpg"
+                    src="/LandImg6.webp"
                     alt="Payment Plans"
                     fill
                     className="object-cover"
@@ -341,7 +341,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
                 <div className="relative h-48 lg:h-64">
                   <Image
-                    src="/frames-for-your-heart-mR1CIDduGLc-unsplash.jpg"
+                    src="/LandImg13.webp"
                     alt="Investment Education"
                     fill
                     className="object-cover"
@@ -369,7 +369,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
                 <div className="relative h-48 lg:h-64">
                   <Image
-                    src="/david-vives-TZdh8NdfIfs-unsplash.jpg"
+                    src="/LandImg12.webp"
                     alt="Investment Consultancy"
                     fill
                     className="object-cover"

@@ -87,7 +87,7 @@ export default function PropertyDetailsClient({ params }: PageProps) {
         ></div>
         <div className="absolute inset-0" style={{ background: 'linear-gradient(0deg, rgba(14,13,83,0.85), rgba(14,13,83,0.6))' }}></div>
 
-        <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 relative z-10 py-24">
+        <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 relative z-10 pt-40 pb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 font-heading">{property.title}</h1>
             <p className="text-lg md:text-xl text-gray-200 mb-2">{property.location}</p>

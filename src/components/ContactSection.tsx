@@ -37,7 +37,7 @@ export default function ContactSection() {
         <AnimateOnScroll direction="left" className="lg:col-span-5 h-full">
           <div className="relative h-[220px] sm:h-[260px] md:h-[320px] lg:h-full w-full">
           <Image
-            src="/david-vives-TZdh8NdfIfs-unsplash.jpg"
+            src="/LandImg3.webp"
             alt="Clients on site"
             fill
             className="object-cover"
