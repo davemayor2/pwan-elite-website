@@ -378,7 +378,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
       'Strategic Location',
       'Investment Potential',
     ],
-    subscriptionFormUrl: '/HAVEN RESIDENCE HOUSING UNIT,  SUB FORM UYO.pdf',
+    subscriptionFormUrl: `${FLYERS}/HAVEN RESIDENCE HOUSING UNIT,  SUB FORM UYO.pdf`,
   },
   
 };
