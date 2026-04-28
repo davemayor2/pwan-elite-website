@@ -52,6 +52,52 @@ export default function PropertyDetailsClient({ params }: PageProps) {
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  const flyerImageUrl = property.images[0] ?? property.heroImage;
+  const flyerFileName = `${property.slug}-flyer.${flyerImageUrl.split('.').pop() ?? 'jpg'}`;
+  const getYouTubeVideoId = (value?: string) => {
+    if (!value) return '';
+    const input = value.trim();
+
+    // Plain YouTube id fallback
+    if (!input.includes('youtube.com') && !input.includes('youtu.be')) return input;
+
+    const parseIdFromUrl = (rawUrl: string): string => {
+      try {
+        const url = new URL(rawUrl);
+        const host = url.hostname.replace('www.', '');
+
+        if (host === 'youtu.be') {
+          return url.pathname.replace('/', '').split('?')[0];
+        }
+
+        if (host === 'youtube.com' || host === 'm.youtube.com') {
+          const vParam = url.searchParams.get('v');
+          if (vParam) {
+            // Handles malformed values like v=https://youtu.be/VIDEO_ID?si=...
+            if (vParam.includes('youtube.com') || vParam.includes('youtu.be')) {
+              return parseIdFromUrl(vParam);
+            }
+            return vParam;
+          }
+
+          const pathParts = url.pathname.split('/').filter(Boolean);
+          if (pathParts[0] === 'embed' && pathParts[1]) return pathParts[1];
+          if (pathParts[0] === 'shorts' && pathParts[1]) return pathParts[1];
+        }
+      } catch {
+        return '';
+      }
+      return '';
+    };
+
+    const parsedId = parseIdFromUrl(input);
+    if (parsedId) return parsedId;
+
+    return input.match(/(?:youtube\.com\/.*[?&]v=|youtu\.be\/)([^&?/]+)/)?.[1] ?? '';
+  };
+
+  const youtubeVideoId = getYouTubeVideoId(property.videoId);
+
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -142,6 +188,13 @@ export default function PropertyDetailsClient({ params }: PageProps) {
                   <li><strong>Payment Plan:</strong> {property.paymentPlan}</li>
                 </ul>
                 <div className="mt-6 space-y-3">
+                  <a
+                    href={flyerImageUrl}
+                    download={flyerFileName}
+                    className="w-full inline-block px-6 py-3 bg-white border border-secondary text-secondary font-semibold text-center hover:bg-gray-100 transition rounded"
+                  >
+                    Download Flyer Image
+                  </a>
                   {property.subscriptionFormUrl && (
                     <a
                       href={property.subscriptionFormUrl}
@@ -173,7 +226,6 @@ export default function PropertyDetailsClient({ params }: PageProps) {
       {/* Details - description/video only */}
       <PropertyDetails
         description={property.description}
-        videoId={property.videoId}
         facts={{
           price: property.price,
           location: property.location,
@@ -185,6 +237,42 @@ export default function PropertyDetailsClient({ params }: PageProps) {
         }}
         showQuickFacts={false}
       />
+
+      {/* YouTube Video Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+            className="bg-[#F8F8F8] border border-gray-200 shadow-sm p-6 md:p-8"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary font-heading mb-3">Property Video Tour</h2>
+            <p className="text-gray-600 mb-6">
+              Explore this property through our YouTube video walkthrough.
+            </p>
+
+            {youtubeVideoId ? (
+              <div className="relative w-full overflow-hidden border border-gray-200 bg-black" style={{ aspectRatio: '16 / 9' }}>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${youtubeVideoId}`}
+                  title={`${property.title} video tour`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 border-0"
+                ></iframe>
+              </div>
+            ) : (
+              <div className="w-full border border-dashed border-gray-300 bg-white p-8 text-center text-gray-600">
+                Video tour will be available soon.
+              </div>
+            )}
+          </motion.div>
+        </div>
+      </section>
 
       {/* Features & Amenities */}
       <section className="py-16 bg-[#F8F8F8]">
