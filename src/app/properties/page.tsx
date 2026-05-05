@@ -5,7 +5,13 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useState } from 'react';
-import { PROPERTY_DETAILS } from '@/data/propertyData';
+import {
+  PROPERTY_DETAILS,
+  PRICE_BANDS,
+  getAllTitleDocumentFilters,
+  matchesPriceBand,
+  normalizeTitleTypes,
+} from '@/data/propertyData';
 
 type Property = {
   name: string;
@@ -15,6 +21,7 @@ type Property = {
   tags: string[];
   image: string;
   titleDocument?: string;
+  normalizedTitleDocuments: string[];
   price: string;
   slug: string;
 };
@@ -28,6 +35,7 @@ const PROPERTIES: Property[] = Object.values(PROPERTY_DETAILS).map((p) => ({
   tags: [`Title: ${p.titleType}`, 'Flexible Payment Plan', 'Secure Environment'],
   image: p.heroImage,
   titleDocument: p.titleType,
+  normalizedTitleDocuments: normalizeTitleTypes(p.titleType),
   price: p.price,
   slug: p.slug,
 }));
@@ -40,9 +48,14 @@ export default function PropertiesPage() {
   const [filteredProperties, setFilteredProperties] = useState<Property[]>(PROPERTIES);
 
   // Available filter options
-  const locations = ['All', 'Awka', 'Asaba', 'Lagos', 'Delta'];
-  const titleDocuments = ['All', 'C of O', 'Deed of Assignment', 'Survey', 'Governor\'s Consent'];
-  const priceRanges = ['All', '750K - 1.5M', '1.5M - 3M', '3M - 5M', '5M - 10M'];
+  const locations = [
+    'All',
+    ...Array.from(new Set(PROPERTIES.map((property) => property.location.split(',').at(-1)?.trim() ?? property.location))).sort((a, b) =>
+      a.localeCompare(b)
+    ),
+  ];
+  const titleDocuments = ['All', ...getAllTitleDocumentFilters()];
+  const priceRanges = [{ id: 'all', label: 'All' }, ...PRICE_BANDS];
 
   // Handle filter application
   const handleApplyFilters = () => {
@@ -58,14 +71,14 @@ export default function PropertiesPage() {
     // Filter by title document
     if (selectedTitleDoc && selectedTitleDoc !== 'All') {
       filtered = filtered.filter(property => 
-        property.titleDocument?.toLowerCase() === selectedTitleDoc.toLowerCase()
+        property.normalizedTitleDocuments.some((doc) => doc.toLowerCase() === selectedTitleDoc.toLowerCase())
       );
     }
 
     // Filter by price
     if (selectedPrice && selectedPrice !== 'All') {
       filtered = filtered.filter(property => 
-        property.price === selectedPrice
+        matchesPriceBand(property.price, selectedPrice)
       );
     }
 
@@ -175,9 +188,9 @@ export default function PropertiesPage() {
                   onChange={(e) => setSelectedPrice(e.target.value)}
                   className="w-full px-4 py-3 bg-white border-2 border-gray-300 font-medium text-gray-700 focus:border-primary focus:outline-none"
                 >
-                  {priceRanges.map((price) => (
-                    <option key={price} value={price}>
-                      {price}
+                  {priceRanges.map((priceRange) => (
+                    <option key={priceRange.id} value={priceRange.id === 'all' ? 'All' : priceRange.id}>
+                      {priceRange.label}
                     </option>
                   ))}
                 </select>

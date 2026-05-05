@@ -5,75 +5,7 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useState } from 'react';
-
-type MediaItem = {
-  id: string;
-  title: string;
-  date: string;
-  category: string;
-  image: string;
-  description: string;
-  type: 'news' | 'event' | 'press' | 'video';
-};
-
-const MEDIA_ITEMS: MediaItem[] = [
-  {
-    id: '1',
-    title: 'EliteHub Properties Launches New Estate Development in Awka',
-    date: 'December 15, 2024',
-    category: 'News',
-    image: '/maximillian-conacher-sPpe2D7VbpM-unsplash.jpg',
-    description: 'Exciting announcement about our latest residential development featuring modern amenities and flexible payment plans.',
-    type: 'news',
-  },
-  {
-    id: '2',
-    title: 'Quarterly Property Investment Seminar',
-    date: 'November 28, 2024',
-    category: 'Event',
-    image: '/krzysztof-hepner-978RAXoXnH4-unsplash.jpg',
-    description: 'Join us for an exclusive event featuring expert talks on real estate investment strategies.',
-    type: 'event',
-  },
-  {
-    id: '3',
-    title: 'EliteHub Properties Wins Best Real Estate Company Award',
-    date: 'November 10, 2024',
-    category: 'Press',
-    image: '/pexels-fauxels-3184465.jpg',
-    description: 'Recognized for excellence in real estate development and customer satisfaction in Nigeria.',
-    type: 'press',
-  },
-  {
-    id: '4',
-    title: 'Virtual Tour: Lavender Courts Estate',
-    date: 'October 22, 2024',
-    category: 'Video',
-    image: '/pexels-davidmcbee-1546168.jpg',
-    description: 'Take a virtual walkthrough of our premium estate with full infrastructure and security features.',
-    type: 'video',
-  },
-  {
-    id: '5',
-    title: 'New Payment Plans Available for All Estates',
-    date: 'October 5, 2024',
-    category: 'News',
-    image: '/david-vives-TZdh8NdfIfs-unsplash.jpg',
-    description: 'Flexible installment options now available. Start your property investment journey with as little as 10% down payment.',
-    type: 'news',
-  },
-  {
-    id: '6',
-    title: 'Groundbreaking Ceremony: Elite City Estate',
-    date: 'September 18, 2024',
-    category: 'Event',
-    image: '/frames-for-your-heart-mR1CIDduGLc-unsplash.jpg',
-    description: 'Official launch of our newest commercial estate development in Asaba with state-of-the-art facilities.',
-    type: 'event',
-  },
-];
-
-const CATEGORIES = ['All', 'News', 'Event', 'Press', 'Video'];
+import { CATEGORIES, MEDIA_ITEMS, MediaItem } from '@/data/mediaData';
 
 export default function MediaPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -182,8 +114,13 @@ export default function MediaPage() {
                       <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                         {item.description}
                       </p>
+                      {item.caption && (
+                        <p className="text-base font-semibold text-primary mb-8">
+                          {item.caption}
+                        </p>
+                      )}
                       <Link
-                        href="/contact"
+                        href={item.type === 'video' ? '/contact' : `/media/${item.slug}`}
                         className="btn-red-to-black inline-flex items-center justify-center px-8 py-4 font-semibold max-w-[200px]"
                       >
                         {item.type === 'video' ? 'Watch Video' : 'Read More'}
@@ -267,8 +204,13 @@ export default function MediaPage() {
                   <p className="text-gray-700 mb-6 line-clamp-2">
                     {item.description}
                   </p>
+                  {item.caption && (
+                    <p className="text-sm font-semibold text-primary mb-6">
+                      {item.caption}
+                    </p>
+                  )}
                   <Link
-                    href="/contact"
+                    href={item.type === 'video' ? '/contact' : `/media/${item.slug}`}
                     className="btn-outline-red-to-black inline-flex items-center justify-center px-6 py-3 font-semibold text-sm w-full"
                   >
                     {item.type === 'video' ? 'Watch Video' : 'Read More'}

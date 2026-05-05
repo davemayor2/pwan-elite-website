@@ -21,6 +21,33 @@ export type PropertyDetailsData = {
   subscriptionFormUrl?: string;
 };
 
+export type PriceBand = {
+  id: string;
+  label: string;
+  min: number;
+  max?: number;
+};
+
+export const PRICE_BANDS: PriceBand[] = [
+  { id: 'under-5m', label: 'Under ₦5M', min: 0, max: 5_000_000 },
+  { id: '5m-10m', label: '₦5M - ₦10M', min: 5_000_000, max: 10_000_000 },
+  { id: '10m-20m', label: '₦10M - ₦20M', min: 10_000_000, max: 20_000_000 },
+  { id: '20m-50m', label: '₦20M - ₦50M', min: 20_000_000, max: 50_000_000 },
+  { id: 'above-50m', label: 'Above ₦50M', min: 50_000_000 },
+];
+
+const TITLE_TYPE_TOKEN_MAP: Record<string, string> = {
+  freehold: 'Freehold',
+  survey: 'Registered Survey',
+  'registered survey': 'Registered Survey',
+  'deed of assignment': 'Deed of Assignment',
+  'deeds of assignment': 'Deed of Assignment',
+  'certificate of occupancy': 'Certificate of Occupancy (C of O)',
+  'c of o': 'Certificate of Occupancy (C of O)',
+  'governor consent': "Governor's Consent",
+  'registered documentation': 'Registered Documentation',
+};
+
 export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
   // Added slugs for cards in listings
   'lavender-courts': {
@@ -240,12 +267,12 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
   'alaoma-luxury-estate': {
     slug: 'alaoma-luxury-estate',
     title: 'Alaoma Luxury Estate',
-    location: 'Ezukwu Achala Ibusa Road, Behind Governance Villa, Asaba, Delta State',
+    location: 'Ngor Okpala, Ochicha Obieke, Owerri, Imo State',
     tagline: 'Premium estate in a buy and build environment with immediate allocation.',
     heroImage: `${FLYERS}/ALAOMA LUXURY.webp`,
     images: [`${FLYERS}/ALAOMA LUXURY.jpeg`, `${FLYERS}/ELITE CITY.jpeg`, '/pexels-davidmcbee-1546168.jpg'],
     price: '₦3,500,000',
-    titleType: 'Freehold',
+    titleType: 'Deeds of Assignment and Registered Survey',
     plotSize: '464sqm',
     propertyType: 'Residential and Commercial',
     paymentPlan: 'Flexible plan',
@@ -310,7 +337,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     heroImage: `${FLYERS}/ELITE EASTLAND.webp`,
     images: [`${FLYERS}/ELITE EASTLAND.jpeg`, `${FLYERS}/ELITE EMPIRE.jpeg`, '/pexels-davidmcbee-1546168.jpg'],
     price: '₦6.5M',
-    titleType: 'C of O',
+    titleType: 'Freehold',
     plotSize: '464sqm',
     propertyType: 'Residential and Commercial',
     paymentPlan: 'Flexible plan',
@@ -382,6 +409,75 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
   },
   
 };
+
+function normalizeTitleTypeInput(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/\//g, ' and ')
+    .replace(/\./g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+export function normalizeTitleTypes(titleType: string): string[] {
+  const normalized = normalizeTitleTypeInput(titleType);
+  const tokens = normalized.split(/\sand\s|,|\|/).map((t) => t.trim()).filter(Boolean);
+  const detected = new Set<string>();
+
+  for (const token of tokens) {
+    const matched = TITLE_TYPE_TOKEN_MAP[token];
+    if (matched) detected.add(matched);
+  }
+
+  for (const [pattern, canonical] of Object.entries(TITLE_TYPE_TOKEN_MAP)) {
+    if (normalized.includes(pattern)) detected.add(canonical);
+  }
+
+  if (detected.size === 0) return [titleType];
+  return Array.from(detected);
+}
+
+export function getAllTitleDocumentFilters(): string[] {
+  const unique = new Set<string>();
+  Object.values(PROPERTY_DETAILS).forEach((property) => {
+    normalizeTitleTypes(property.titleType).forEach((title) => unique.add(title));
+  });
+  return Array.from(unique).sort((a, b) => a.localeCompare(b));
+}
+
+export function extractPriceNumbers(price: string): number[] {
+  const normalized = price.replace(/,/g, '').replace(/₦/g, '').trim();
+  const matches = normalized.match(/(\d+(?:\.\d+)?)(\s*[mMkK])?/g) ?? [];
+
+  return matches
+    .map((token) => {
+      const numMatch = token.match(/(\d+(?:\.\d+)?)/);
+      if (!numMatch) return undefined;
+      const value = Number.parseFloat(numMatch[1]);
+      if (Number.isNaN(value)) return undefined;
+      const hasMillion = /m/i.test(token);
+      const hasThousand = /k/i.test(token);
+      if (hasMillion) return value * 1_000_000;
+      if (hasThousand) return value * 1_000;
+      return value;
+    })
+    .filter((value): value is number => typeof value === 'number');
+}
+
+export function matchesPriceBand(price: string, bandId: string): boolean {
+  const band = PRICE_BANDS.find((item) => item.id === bandId);
+  if (!band) return true;
+
+  const values = extractPriceNumbers(price);
+  if (values.length === 0) return false;
+
+  const minValue = Math.min(...values);
+  const maxValue = Math.max(...values);
+  const bandMax = band.max ?? Number.POSITIVE_INFINITY;
+
+  return maxValue >= band.min && minValue < bandMax;
+}
 
 export function getPropertyBySlug(slug: string): PropertyDetailsData | undefined {
   return PROPERTY_DETAILS[slug];

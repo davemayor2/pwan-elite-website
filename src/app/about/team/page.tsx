@@ -183,12 +183,12 @@ export default function OurTeamPage() {
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
                 <Image
                   src="/amara1.webp"
-                  alt="Amarachi"
+                  alt="Amarachi Orji"
                   fill
                   className="object-cover"
                 />
               </div>
-              <h3 className="font-bold text-secondary mb-1 text-lg font-heading">Amarachi</h3>
+              <h3 className="font-bold text-secondary mb-1 text-lg font-heading">Amarachi Orji</h3>
               <p className="text-primary text-sm font-semibold">Administrative Officer, Lagos</p>
             </div>
 

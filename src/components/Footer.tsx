@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-3">
               <Image
-                src="/elitehub.webp"
+                src="/elite hub logo.png"
                 alt="EliteHub Properties Logo"
                 width={80}
                 height={80}
