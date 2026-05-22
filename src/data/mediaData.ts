@@ -1,5 +1,10 @@
 export type MediaCategory = 'Allocations' | 'Events' | 'News' | 'Press';
 
+export type MediaSpeaker = {
+  name: string;
+  role: string;
+};
+
 export type MediaItem = {
   id: string;
   slug: string;
@@ -14,6 +19,9 @@ export type MediaItem = {
   videoId?: string;
   estate?: string;
   location?: string;
+  time?: string;
+  registrationUrl?: string;
+  speakers?: MediaSpeaker[];
   highlights?: string[];
   body?: string[];
 };
@@ -21,6 +29,72 @@ export type MediaItem = {
 export const CATEGORIES: ('All' | MediaCategory)[] = ['All', 'Allocations', 'Events', 'News', 'Press'];
 
 export const MEDIA_ITEMS: MediaItem[] = [
+  {
+    id: '3-days-intensive-summit-2026',
+    slug: '3-days-intensive-summit-2026',
+    category: 'Events',
+    title: '3 Days Intensive Summit \'26: Rebuilding Trust & Rebranding Vision',
+    date: 'Wednesday, June 3rd – Friday, June 5th, 2026',
+    caption: 'Where vision meets opportunity — We\'re Intentional 💪',
+    description:
+      'Join the 3 Days Intensive Summit \'26 for leadership, trust, innovation, and transformational growth. Connect with visionary minds at Elite Hub Properties — registration is compulsory.',
+    image: '/3-days.jpeg',
+    gallery: ['/3-days June', '/3-days.jpeg', '/3-days pt2.jpeg'],
+    type: 'article',
+    location: '25B David Adekunle Street, Lilly Estate, Amuwo Odofin, Festac Town, Lagos',
+    time: '10:00 AM Prompt (WAT)',
+    registrationUrl: 'https://forms.gle/tnpFhzdLzb8SMKUP9',
+    speakers: [
+      { name: 'Dr. Amb. Emeka Justine', role: 'MD PWAN Elite — Host' },
+      { name: 'Mr. Iheanacho Okoro', role: 'Facilitator' },
+      { name: 'Mr. S. Pedro', role: 'Facilitator' },
+      { name: 'Mr. Ayuk Ndip Arrey Ntoh', role: 'TEXA — Facilitator' },
+      { name: 'Mr. Joseph Oyewo', role: 'Facilitator' },
+    ],
+    highlights: [
+      '3-day intensive summit on trust, vision & growth',
+      'Wed 13 – Fri 15 May 2026 · 10:00 AM Prompt (WAT)',
+      '25B David Adekunle St., Lilly Estate, Festac Town',
+      'Free access — registration via Google Form is required',
+    ],
+    body: [
+      'Growth begins with the right room. 🚀✨',
+      'Join the 3 Days Intensive Summit \'26, a powerful experience focused on leadership, trust, innovation, and transformational growth. Connect with visionary minds, gain valuable insights, and position yourself for greater success.',
+      'Theme: REBUILDING TRUST & REBRANDING VISION.',
+      'This is more than a summit… it\'s where vision meets opportunity.',
+      'Hosted by Elite Hub Properties. Access is FREE — registration is compulsory. Secure your spot via the registration link on this page.',
+      'For enquiries, call 08177500018 or 08034946564.',
+      'Elite Hub Properties — We\'re Intentional 💪',
+    ],
+  },
+  {
+    id: 'elite-hub-incentives-promo-may-2026',
+    slug: 'elite-hub-incentives-promo-may-2026',
+    category: 'News',
+    title: 'Incentives Are Back: Sell, Earn, Get Rewarded',
+    date: 'May 11, 2026',
+    caption: 'SELL • EARN • GET REWARDED — We\'re Intentional 💪',
+    description:
+      'Make sales worth ₦1.5M and above on any Elite Hub Properties and qualify for amazing gift items — from household appliances and electronics to generators and more.',
+    image: '/Incentives.jpeg',
+    type: 'article',
+    highlights: [
+      '₦1.5M+ in sales qualifies you for amazing gift rewards',
+      'Prizes include appliances, electronics, generators & food items',
+      'Promo runs 11 May – 30 June 2026',
+      'Every closed deal brings you closer to valuable rewards',
+    ],
+    body: [
+      '💥 INCENTIVES ARE BACK! 💥',
+      'This is your opportunity to sell, earn, and get rewarded in a big way with Elite Hub Properties.',
+      'Make sales worth ₦1.5M and above on any Elite Hub Properties and qualify for amazing gift items ranging from household appliances, electronics, food items, generators, and many more exciting rewards. 🎁🔥',
+      'Why just work when you can work and win? Every closed deal brings you closer to valuable rewards designed to appreciate your effort and dedication.',
+      'Promo duration: Effective from 11th May – 30th June, 2026.',
+      'Don\'t miss this rewarding season. Push harder, close more deals, increase your earnings, and go home with amazing gifts.',
+      'SELL • EARN • GET REWARDED',
+      'We\'re Intentional 💪 — Visit www.elitehubproperties.com to learn more.',
+    ],
+  },
   {
     id: 'lavender-farm-city-allocation-may-2026',
     slug: 'lavender-farm-city-allocation-may-2026',

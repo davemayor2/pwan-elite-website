@@ -128,6 +128,25 @@ export default function MediaDetailsClient({ params }: PageProps) {
                   </p>
                 ))}
               </div>
+
+              {media.speakers && media.speakers.length > 0 && (
+                <div className="mt-12">
+                  <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-6 font-heading">
+                    Speakers & Facilitators
+                  </h3>
+                  <ul className="space-y-4">
+                    {media.speakers.map((speaker) => (
+                      <li
+                        key={speaker.name}
+                        className="border border-gray-200 bg-gray-50 p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
+                      >
+                        <span className="font-semibold text-secondary text-lg">{speaker.name}</span>
+                        <span className="text-primary font-medium">{speaker.role}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </motion.div>
           </article>
 
@@ -141,9 +160,9 @@ export default function MediaDetailsClient({ params }: PageProps) {
                 <li>
                   <strong>Date:</strong> {media.date}
                 </li>
-                {media.estate && (
+                {media.time && (
                   <li>
-                    <strong>Estate:</strong> {media.estate}
+                    <strong>Time:</strong> {media.time}
                   </li>
                 )}
                 {media.location && (
@@ -151,11 +170,30 @@ export default function MediaDetailsClient({ params }: PageProps) {
                     <strong>Location:</strong> {media.location}
                   </li>
                 )}
+                {media.estate && (
+                  <li>
+                    <strong>Estate:</strong> {media.estate}
+                  </li>
+                )}
               </ul>
-              <div className="mt-6 space-y-3">
+              <motion.div className="mt-6 space-y-3">
+                {media.registrationUrl && (
+                  <a
+                    href={media.registrationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-block px-6 py-3 bg-primary text-white font-semibold text-center hover:opacity-90 transition rounded"
+                  >
+                    Register Now
+                  </a>
+                )}
                 <Link
                   href="/properties"
-                  className="w-full inline-block px-6 py-3 bg-primary text-white font-semibold text-center hover:opacity-90 transition rounded"
+                  className={`w-full inline-block px-6 py-3 font-semibold text-center hover:opacity-90 transition rounded ${
+                    media.registrationUrl
+                      ? 'bg-white border border-secondary text-secondary hover:bg-gray-100'
+                      : 'bg-primary text-white'
+                  }`}
                 >
                   Browse Active Estates
                 </Link>
@@ -165,7 +203,7 @@ export default function MediaDetailsClient({ params }: PageProps) {
                 >
                   Speak to Our Team
                 </Link>
-              </div>
+              </motion.div>
             </div>
           </aside>
         </div>
@@ -175,14 +213,18 @@ export default function MediaDetailsClient({ params }: PageProps) {
       {gallery.length > 1 && (
         <section className="py-16 bg-[#F8F8F8]">
           <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24">
-            <motion.h2
+              <motion.h2
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               className="text-3xl md:text-4xl font-bold text-secondary mb-8 font-heading"
             >
-              Allocation Gallery
+              {media.category === 'Events'
+                ? 'Event Flyers'
+                : media.category === 'Allocations'
+                  ? 'Allocation Gallery'
+                  : 'Gallery'}
             </motion.h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
               {gallery.map((src, idx) => (

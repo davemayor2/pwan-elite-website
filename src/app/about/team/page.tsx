@@ -76,19 +76,6 @@ export default function OurTeamPage() {
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
                 <Image
-                  src="/korede1.webp"
-                  alt="Korede Tiamiyu"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="font-bold text-secondary mb-1 text-lg font-heading">Korede Tiamiyu</h3>
-              <p className="text-primary text-sm font-semibold">Head of Operations, Lagos</p>
-            </div>
-
-            <div className="bg-white text-center">
-              <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
-                <Image
                   src="/pius.webp"
                   alt="Pius Dabel"
                   fill
@@ -99,18 +86,6 @@ export default function OurTeamPage() {
               <p className="text-primary text-sm font-semibold">Head of Accounts, Lagos</p>
             </div>
 
-            <div className="bg-white text-center">
-              <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
-                <Image
-                  src="/1.webp"
-                  alt="Joshua Ihaza"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="font-bold text-secondary mb-1 text-lg font-heading">Joshua Ihaza</h3>
-              <p className="text-primary text-sm font-semibold">Head Of Administration, Lagos</p>
-            </div>
 
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
@@ -241,19 +216,6 @@ export default function OurTeamPage() {
                 />
               </div>
               <h3 className="font-bold text-secondary mb-1 text-lg font-heading">Kalu Udodirim</h3>
-              <p className="text-primary text-sm font-semibold">Mentee, Lagos</p>
-            </div>
-
-            <div className="bg-white text-center">
-              <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
-                <Image
-                  src="/Joshua.jpg"
-                  alt="Joshua Godwin"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="font-bold text-secondary mb-1 text-lg font-heading">Joshua Godwin</h3>
               <p className="text-primary text-sm font-semibold">Mentee, Lagos</p>
             </div>
           </div>
