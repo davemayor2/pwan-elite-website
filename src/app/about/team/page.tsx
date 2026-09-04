@@ -7,7 +7,7 @@ export default function OurTeamPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="pt-50 pb-16">
         <div className="max-w-7xl mx-auto px-6 sm:px-12">
@@ -15,13 +15,13 @@ export default function OurTeamPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-6 font-heading">
               Meet Our <span className="text-primary">Elite Team</span>
             </h1>
-            
+
             <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Behind every successful transaction is a passionate team of professionals driven by excellence and service. 
-              At EliteHub Properties, our people are our greatest asset — combining real estate expertise with a genuine desire 
+              Behind every successful transcuaction is a passionate team of professionals driven by excellence and service.
+              At EliteHub Properties, our people are our greatest asset — combining real estate expertise with a genuine desire
               to see every client succeed.
             </p>
-            
+
             <Link href="/contact" className="inline-block bg-primary text-white px-8 py-4 font-semibold text-lg hover:bg-[#e09420] transition-colors mb-12">
               Contact Our Team Today
             </Link>
@@ -40,7 +40,7 @@ export default function OurTeamPage() {
         />
       </section>
 
-      
+
       {/* Our Elite Team Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6 sm:px-12">
@@ -62,7 +62,7 @@ export default function OurTeamPage() {
                   className="object-cover"
                 />
               </div>
-              
+
               {/* Name and Title */}
               <h3 className="font-bold text-secondary mb-2 text-2xl font-heading">Emeka Justine</h3>
               <p className="text-primary text-lg font-semibold">Managing Director, EliteHub Properties</p>
@@ -87,18 +87,6 @@ export default function OurTeamPage() {
             </div>
 
 
-            <div className="bg-white text-center">
-              <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
-                <Image
-                  src="/tochukwu1.webp"
-                  alt="Isaiah Stanley"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="font-bold text-secondary mb-1 text-lg font-heading">Isaiah Stanley</h3>
-              <p className="text-primary text-sm font-semibold">Head of Media, Lagos</p>
-            </div>
 
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">
@@ -152,7 +140,7 @@ export default function OurTeamPage() {
               <p className="text-primary text-sm font-semibold">Accounts Assistant, Lagos</p>
             </div>
 
-            
+
 
             <div className="bg-white text-center">
               <div className="relative w-[280px] h-[350px] mx-auto mb-4 border-2 border-gray-200">

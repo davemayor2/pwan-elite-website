@@ -39,22 +39,6 @@ const PROPERTIES: Property[] = [
     tag: 'SELLING FAST',
     slug: 'lavender-park-estate',
   },
-  {
-    title: 'Kole-Ayo',
-    description:
-      'Located at Anobi London Road, Irangushi, Epe, Lagos. Freehold title with immediate allocation on a serene and accessible plot.',
-    priceLabel: 'FROM ₦3M',
-    tag: 'INSTANT ALLOCATION',
-    slug: 'kole-ayo-estate',
-  },
-  {
-    title: 'Lavender Garden Estate',
-    description:
-      'Premium residential land in Obomkpa, Issele-Uku, Asaba. Comes with Registered Survey & Deed of Assignment, near NYSC Camp and Federal Medical Centre.',
-    priceLabel: '₦1,500,000',
-    tag: 'NEW ESTATE',
-    slug: 'lavender-garden-estate',
-  },
 ];
 
 export default function FeaturedListings() {
@@ -85,7 +69,7 @@ export default function FeaturedListings() {
           </div>
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-0 lg:flex lg:items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-0 lg:flex lg:items-stretch">
           {PROPERTIES.map((p, idx) => {
             const isActive = activeIdx === idx;
             return (

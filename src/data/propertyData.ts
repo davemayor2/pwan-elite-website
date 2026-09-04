@@ -19,6 +19,7 @@ export type PropertyDetailsData = {
   mapEmbedUrl?: string;
   brochureUrl?: string;
   subscriptionFormUrl?: string;
+  videos?: string[];
 };
 
 export type PriceBand = {
@@ -69,8 +70,9 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     videoId: 'https://www.youtube.com/watch?v=bk6sYkd3-2Q?si=ERvciqmILi3TahZF',
     amenities: ['Perimeter Fencing', 'Road Network', 'Security Gatehouse', 'Streetlights'],
     subscriptionFormUrl: `${FLYERS}/LAVENDER COURT AWKA SUB FORM 2026.pdf`,
+    videos: ['/ELITE HUB VIDEOS/LAVENDER COURTS AWKA new .mp4'],
   },
-  
+
   'lavender-garden-estate': {
     slug: 'lavender-garden-estate',
     title: 'Lavender Garden Estate',
@@ -99,6 +101,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
       'Security',
     ],
     subscriptionFormUrl: `${FLYERS}/LAVENDER GARDEN  SUB FORM 2026.pdf`,
+    videos: ['/ELITE HUB VIDEOS/LAVENDER GARDEN.mp4'],
   },
   'lavender-park-estate': {
     slug: 'lavender-park-estate',
@@ -128,6 +131,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
       'Street Lighting',
     ],
     subscriptionFormUrl: `${FLYERS}/LAVENDER PARK SUB FORM 2026.pdf`,
+    videos: ['/ELITE HUB VIDEOS/LAVENDER PARK.mp4'],
   },
   'aku-ruo-uno': {
     slug: 'aku-ruo-uno',
@@ -150,6 +154,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     videoId: 'https://youtu.be/g2tzdZ07Who?si=i-L1JnJqXqIsc-5J',
     amenities: ['Perimeter Fencing', 'Fully Plotted', 'Immediate Allocation', 'Road Network', 'Security'],
     subscriptionFormUrl: `${FLYERS}/AKU RUO UNO  2 SUB FORM 2026.pdf`,
+    videos: ['/ELITE HUB VIDEOS/AKU RUO UNO 2.mp4', '/ELITE HUB VIDEOS/AKU RUO UNO 2 NEW.MP4'],
   },
   'kole-ayo-estate': {
     slug: 'kole-ayo-estate',
@@ -157,7 +162,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     location: 'Anobi London road, Irangushi, Eredo local government council, Epe Lagos',
     tagline: 'Freehold title with immediate allocation in a rapidly developing area.',
     heroImage: `${FLYERS}/KOLE AYO.webp`,
-    images: [`${FLYERS}/KOLE AYO.jpeg`, '/urbanLegacy.jpg', '/maximillian-conacher-sPpe2D7VbpM-unsplash.jpg'],
+    images: [`${FLYERS}/KOLE AYO.jpeg`, `${FLYERS}/Urban_Legacy_New.jpeg`, '/maximillian-conacher-sPpe2D7VbpM-unsplash.jpg'],
     price: '₦8.5M',
     titleType: 'Freehold',
     plotSize: '500sqm',
@@ -171,6 +176,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     videoId: 'https://www.youtube.com/watch?v=MbKf4iE0fZ8?si=A_QEG6MbiOxeXf7X',
     amenities: ['Perimeter Fencing', 'Fully Plotted', 'Immediate Allocation', 'Good Road Network', 'Security Gatehouse', 'Streetlights'],
     subscriptionFormUrl: `${FLYERS}/KOLE-AYO SUB FORM 2026.pdf`,
+    videos: ['/ELITE HUB VIDEOS/KOLE AYO.mp4'],
   },
   'elite-city-estate': {
     slug: 'elite-city-estate',
@@ -181,7 +187,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     price: '₦10,000,000',
     titleType: "Deed of Assignment and Registered Survey",
     plotSize: '464sqm',
-    propertyType: 'Commercial & Residential', 
+    propertyType: 'Commercial & Residential',
     paymentPlan: 'Flexible plan',
     description: [
       'Located opposite Admiralty University Ibusa, Asaba. Currently selling for 6.5m. It is located in a fast developing area with several infrastructural development coming up in the area.',
@@ -191,6 +197,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     videoId: 'https://www.youtube.com/watch?v=PLACEHOLDER_VIDEO_ID',
     amenities: ['Perimeter Fencing', 'Road Network', 'Streetlights'],
     subscriptionFormUrl: `${FLYERS}/ELITE CITY  SUB FORM 2026.pdf`,
+    videos: ['/ELITE HUB VIDEOS/ELITE CITY.MP4', '/ELITE HUB VIDEOS/ELITE CITY 1.MP4'],
   },
   'elite-haven': {
     slug: 'elite-haven',
@@ -220,8 +227,8 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     title: 'Urban Legacy',
     location: 'Ebute kekere way, Afolabi bus stop, Igando road Lagos',
     tagline: 'Prime location in a built-up environment with excellent accessibility.',
-    heroImage: `${FLYERS}/URBAN LEGACY.webp`,
-    images: [`${FLYERS}/Urban Legacy.jpeg`, '/david-vives-TZdh8NdfIfs-unsplash.jpg', '/pexels-davidmcbee-1546168.jpg'],
+    heroImage: `${FLYERS}/Urban_Legacy_New.webp`,
+    images: [`${FLYERS}/Urban_Legacy_New.jpeg`, '/david-vives-TZdh8NdfIfs-unsplash.jpg', '/pexels-davidmcbee-1546168.jpg'],
     price: '₦10M',
     titleType: 'Registered Survey',
     plotSize: '500sqm',
@@ -235,6 +242,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     videoId: 'https://www.youtube.com/watch?v=EzOU6pFqr3E?si=gGwVDZvRiGqPLwK6',
     amenities: ['Cleared Land', 'Road Development Ongoing', 'Registered Survey', 'Excellent Accessibility'],
     subscriptionFormUrl: `${FLYERS}/URBAN LEGACY  SUB FORM 2026.pdf`,
+    videos: ['/ELITE HUB VIDEOS/URBAN LEGACY .mp4', '/ELITE HUB VIDEOS/URBAN LEGACY ALLOCATION .mp4'],
   },
   'eastview-estate': {
     slug: 'eastview-estate',
@@ -263,6 +271,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
       'Street Light',
     ],
     subscriptionFormUrl: undefined,
+    videos: ['/ELITE HUB VIDEOS/EASTVIEW PHASE 3.mp4'],
   },
   'alaoma-luxury-estate': {
     slug: 'alaoma-luxury-estate',
@@ -285,6 +294,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     videoId: 'https://www.youtube.com/watch?v=9OeojdSnyzo?si=xc8s2CqL8fv0S0Rc',
     amenities: ['Perimeter Fencing', 'Fully Plotted', 'Immediate Allocation', 'Road Network', 'Security'],
     subscriptionFormUrl: `${FLYERS}/ALAOMA LUXURY  SUB FORM 2026.pdf`,
+    videos: ['/ELITE HUB VIDEOS/ALAOMA.mp4'],
   },
   'elite-empire': {
     slug: 'elite-empire',
@@ -292,7 +302,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     location: 'Avu-oforola, Owerri, Imo State',
     tagline: 'Premium estate with great value on high quality investment.',
     heroImage: `${FLYERS}/ELITE EMPIRE.webp`,
-    images: [`${FLYERS}/ELITE EMPIRE.jpeg`, `${FLYERS}/URBAN LEGACY.jpeg`, '/pexels-davidmcbee-1546168.jpg'],
+    images: [`${FLYERS}/ELITE EMPIRE.jpeg`, `${FLYERS}/Urban_Legacy_New.jpeg`, '/pexels-davidmcbee-1546168.jpg'],
     price: '₦7,000,000',
     titleType: 'Deeds of Assignment and Registered Survey',
     plotSize: '464sqm',
@@ -306,6 +316,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     videoId: 'https://www.youtube.com/watch?v=cAciiKX8LdY?si=N2iHXV1Za_bzwuYh',
     amenities: ['Perimeter Fencing', 'Fully Plotted', 'Immediate Allocation', 'Road Network', 'Security'],
     subscriptionFormUrl: `${FLYERS}/ELITE EMPIRE  SUB FORM 2026.pdf`,
+    videos: ['/ELITE HUB VIDEOS/ELITE EMPIRE.mp4'],
   },
   'obi-eze-estate': {
     slug: 'obi-eze-estate',
@@ -328,6 +339,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     videoId: 'https://www.youtube.com/watch?v=kqj5hS_Uww8?si=BNI6wZybJVfo3kim',
     amenities: ['Perimeter Fencing', 'Fully Plotted', 'Immediate Allocation', 'Road Network', 'Security'],
     subscriptionFormUrl: `${FLYERS}/OBI EZE 2 SUB FORM 2026.pdf`,
+    videos: ['/ELITE HUB VIDEOS/OBI EZE PHASE 2.mp4'],
   },
   'elite-eastland-phase-2': {
     slug: 'elite-eastland-phase-2',
@@ -349,15 +361,16 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
     videoId: 'https://www.youtube.com/watch?v=qNo9_B5BdF0?si=Mmfjb6ztuIscd0FN',
     amenities: ['Perimeter Fencing', 'Road Network', 'Security', 'Streetlights'],
     subscriptionFormUrl: `${FLYERS}/ELITE EASTLAND 2 SUB FORM 2026.pdf`,
+    videos: ['/ELITE HUB VIDEOS/ELITE EASTLAND 2 NEW .mp4'],
   },
   'ugwumba-estate': {
     slug: 'ugwumba-estate',
     title: 'Ugwumba Estate',
     location: 'Aba, Abia State',
     tagline: 'Where value meets affordability — a budget plot at your own fingerprint.',
-    heroImage: `${FLYERS}/UGWUMBA ESTATE.webp`,
-    images: [`${FLYERS}/UGWUMBA ESTATE.jpeg`, `${FLYERS}/ELITE CITY.jpeg`, '/pexels-davidmcbee-1546168.jpg'],
-    price: '₦7,500,000',
+    heroImage: `${FLYERS}/Ugwumba_estate_new.webp`,
+    images: [`${FLYERS}/Ugwumba_estate_new.jpeg`, `${FLYERS}/ELITE CITY.jpeg`, '/pexels-davidmcbee-1546168.jpg'],
+    price: '₦15,000,000',
     titleType: 'Certificate of Occupancy (C of O)',
     plotSize: '464 SQM',
     propertyType: 'Residential and Commercial',
@@ -378,6 +391,7 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
       'Street Lighting',
     ],
     subscriptionFormUrl: `${FLYERS}/UGWUMBA  SUB FORM 2026.pdf`,
+    videos: ['/ELITE HUB VIDEOS/UGWUMBA .mp4'],
   },
   'haven-residence': {
     slug: 'haven-residence',
@@ -406,8 +420,14 @@ export const PROPERTY_DETAILS: Record<string, PropertyDetailsData> = {
       'Investment Potential',
     ],
     subscriptionFormUrl: `${FLYERS}/HAVEN RESIDENCE HOUSING UNIT,  SUB FORM UYO.pdf`,
+    videos: [
+      '/ELITE HUB VIDEOS/HAVEN RESIDENCE.mp4',
+      '/ELITE HUB VIDEOS/ELITE RESIDENCE .mp4',
+      '/ELITE HUB VIDEOS/ELITE RESIDENCE 1.mp4',
+      '/ELITE HUB VIDEOS/ELITE RESIDENCE NEW.mp4',
+    ],
   },
-  
+
 };
 
 function normalizeTitleTypeInput(value: string): string {

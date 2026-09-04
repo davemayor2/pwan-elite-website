@@ -9,12 +9,12 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import Testimonials from '@/components/Testimonials';
 import ContactSection from '@/components/ContactSection';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
-import FlyerPopup from '@/components/FlyerPopup';
+// import FlyerPopup from '@/components/FlyerPopup';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <FlyerPopup />
+      {/* <FlyerPopup /> */}
       <Navbar />
       <Hero />
       <ScrollingServicesBar />

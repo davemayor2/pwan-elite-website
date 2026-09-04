@@ -238,7 +238,7 @@ export default function PropertyDetailsClient({ params }: PageProps) {
         showQuickFacts={false}
       />
 
-      {/* YouTube Video Section */}
+      {/* Property Video Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24">
           <motion.div
@@ -249,25 +249,80 @@ export default function PropertyDetailsClient({ params }: PageProps) {
             className="bg-[#F8F8F8] border border-gray-200 shadow-sm p-6 md:p-8"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-secondary font-heading mb-3">Property Video Tour</h2>
-            <p className="text-gray-600 mb-6">
-              Explore this property through our YouTube video walkthrough.
-            </p>
 
-            {youtubeVideoId ? (
-              <div className="relative w-full overflow-hidden border border-gray-200 bg-black" style={{ aspectRatio: '16 / 9' }}>
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={`https://www.youtube.com/embed/${youtubeVideoId}`}
-                  title={`${property.title} video tour`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 border-0"
-                ></iframe>
+            {property.videos && property.videos.length > 0 ? (
+              <div className="space-y-8">
+                <p className="text-gray-600 mb-6">
+                  Watch or download our official estate video tours below.
+                </p>
+                <div className={`grid grid-cols-1 ${property.videos.length > 1 ? 'md:grid-cols-2' : ''} gap-6`}>
+                  {property.videos.map((videoUrl, idx) => {
+                    const videoName = videoUrl.split('/').pop() || '';
+                    const downloadText = property.videos!.length > 1
+                      ? `Download Estate Video ${idx + 1}`
+                      : 'Download Estate Video';
+                    return (
+                      <div key={videoUrl} className="flex flex-col bg-white border border-gray-200 p-4 shadow-sm rounded-lg">
+                        <div className="relative w-full overflow-hidden border border-gray-200 bg-black rounded" style={{ aspectRatio: '16 / 9' }}>
+                          <video
+                            src={videoUrl}
+                            controls
+                            preload="metadata"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="mt-4">
+                          <a
+                            href={videoUrl}
+                            download={videoName}
+                            className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white font-semibold text-center hover:opacity-90 transition rounded"
+                          >
+                            📥 {downloadText}
+                          </a>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                {youtubeVideoId && (
+                  <div className="border-t border-gray-200 pt-8 mt-8">
+                    <h3 className="text-xl font-semibold text-secondary mb-4">Alternative YouTube Walkthrough</h3>
+                    <div className="relative w-full overflow-hidden border border-gray-200 bg-black" style={{ aspectRatio: '16 / 9' }}>
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={`https://www.youtube.com/embed/${youtubeVideoId}`}
+                        title={`${property.title} video tour`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute inset-0 border-0"
+                      ></iframe>
+                    </div>
+                  </div>
+                )}
               </div>
             ) : (
-              <div className="w-full border border-dashed border-gray-300 bg-white p-8 text-center text-gray-600">
-                Video tour will be available soon.
+              <div>
+                <p className="text-gray-600 mb-6">
+                  Explore this property through our YouTube video walkthrough.
+                </p>
+                {youtubeVideoId ? (
+                  <div className="relative w-full overflow-hidden border border-gray-200 bg-black" style={{ aspectRatio: '16 / 9' }}>
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={`https://www.youtube.com/embed/${youtubeVideoId}`}
+                      title={`${property.title} video tour`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 border-0"
+                    ></iframe>
+                  </div>
+                ) : (
+                  <div className="w-full border border-dashed border-gray-300 bg-white p-8 text-center text-gray-600">
+                    Video tour will be available soon.
+                  </div>
+                )}
               </div>
             )}
           </motion.div>

@@ -5,8 +5,7 @@ import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const FLYERS = [
-  { src: '/3-days.jpeg', alt: '3 Days Intensive Summit 2026 — Rebuilding Trust & Rebranding Vision' },
-  { src: '/Incentives.jpeg', alt: 'Elite Hub Properties — Sales incentives and rewards' },
+  { src: '/ELITE MASTERCLASS.jpeg', alt: 'PWAN Elite Masterclass' },
 ] as const;
 
 const AUTO_SLIDE_MS = 4500;
@@ -28,7 +27,7 @@ export default function FlyerPopup() {
   };
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen || FLYERS.length <= 1) return;
     const timer = setInterval(goToNext, AUTO_SLIDE_MS);
     return () => clearInterval(timer);
   }, [isOpen, goToNext]);
@@ -117,27 +116,28 @@ export default function FlyerPopup() {
             </AnimatePresence>
           </motion.div>
 
-          <motion.div
-            className="flex items-center justify-center gap-2 py-3"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            {FLYERS.map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                onClick={() => goToSlide(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === currentIndex
+          {FLYERS.length > 1 && (
+            <motion.div
+              className="flex items-center justify-center gap-2 py-3"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              {FLYERS.map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => goToSlide(index)}
+                  className={`h-2 rounded-full transition-all ${index === currentIndex
                     ? 'w-6 bg-green-700'
                     : 'w-2 bg-gray-300 hover:bg-gray-400'
-                }`}
-                aria-label={`Show flyer ${index + 1}`}
-                aria-current={index === currentIndex ? 'true' : undefined}
-              />
-            ))}
-          </motion.div>
+                    }`}
+                  aria-label={`Show flyer ${index + 1}`}
+                  aria-current={index === currentIndex ? 'true' : undefined}
+                />
+              ))}
+            </motion.div>
+          )}
         </motion.div>
       </div>
     </motion.div>
