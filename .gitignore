@@ -15,7 +15,6 @@
 
 # next.js
 /.next/
-/out/
 out.zip
 *.zip
 
@@ -28,6 +27,7 @@ out.zip
 *.mp4
 *.MP4
 public/ELITE HUB VIDEOS/
+out/ELITE HUB VIDEOS/
 
 # debug
 npm-debug.log*

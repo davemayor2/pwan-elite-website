@@ -71,7 +71,10 @@ export default function Hero() {
 
       {/* Image fallback if video can't play */}
       {!isVideoReady && (
-        <div className="absolute inset-0 z-0 bg-[url('/posterdelay.png')] bg-cover bg-center" />
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center" 
+          style={{ backgroundImage: "url('/posterdelay.png')" }}
+        />
       )}
       
       {/* Dark Overlay */}
